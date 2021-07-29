@@ -25,3 +25,4 @@ fields:
   label: permalink
 pages:
 - docs/expression-reference.md
+- docs/node-cheatsheet.md
