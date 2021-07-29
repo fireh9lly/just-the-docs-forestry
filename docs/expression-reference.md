@@ -24,11 +24,11 @@ Expressions are built up out of _values_ and _operators_. Values come in five ba
 
   Arrays can contain any kind of data, including other arrays. You can think of an array as a numbered list, where the first entry in the list is numbered 0. To get an individual element stored in an array, use the name of the array followed by the index number, in square brackets, of the element you want.
 
-  `ingredients[0] -> "garlic"`
+  `ingredients[0]` -> `"garlic"`
 
-  `ingredients[1] -> "lemon juice"`
+  `ingredients[1]` -> `"lemon juice"`
 
-  `ingredients[2] -> "oregano"`
+  `ingredients[2]` -> `"oregano"`
 
   Arrays can be useful for storing player inventories, or lists of locations or clues.
 * **Objects ##TODO**
