@@ -14,13 +14,13 @@ fields:
 - type: textarea
   name: description
   label: description
-- type: text
-  name: permalink
-  label: permalink
 - name: nav_order
   type: text
   config:
     required: false
   label: nav_order
+- type: text
+  name: permalink
+  label: permalink
 pages:
 - index.md
