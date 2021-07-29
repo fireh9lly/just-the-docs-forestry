@@ -6,78 +6,12 @@ description: Just the Docs is a responsive Jekyll theme with built-in search tha
 permalink: "/"
 
 ---
-# LOOK AT THIS SHIT
+# Welcome to VNKit!
 
-I'm editing the internet!!!!!!!!!!!
+VNKit is a plugin that allows you to build a visual novel in Unity by linking together Nodes. It's designed to be easy for beginners to use, but also packs a lot of advanced features to allow you to add developed and interesting gameplay features to your visual novel.
 
-***
+### What's a Visual Novel?
 
-## Getting started
+For our purposes, a _visual novel_ is a narrative-focused game where the player doesn't move a character directly (as in an action game), instead experiencing a story through text, sprite-based visuals, and sound. Because they put the focus on storytelling, they are an iconic format for romance and mystery games, but their ability to track complex variables also makes them well suited to handling simulations and gamebook-style RPGs.
 
-### Dependencies
-
-Just the Docs is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/) for more information. Just the Docs requires no special plugins and can run on GitHub Pages' standard Jekyll compiler. The [Jekyll SEO Tag plugin](https://github.com/jekyll/jekyll-seo-tag) is included by default (no need to run any special installation) to inject SEO and open graph metadata on docs pages. For information on how to configure SEO and open graph metadata visit the [Jekyll SEO Tag usage guide](https://jekyll.github.io/jekyll-seo-tag/usage/).
-
-### Quick start: Use as a GitHub Pages remote theme
-
-1. Add Just the Docs to your Jekyll site's `_config.yml` as a [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/)
-
-```yaml
-remote_theme: pmarsceill/just-the-docs
-```
-
-<small>You must have GitHub Pages enabled on your repo, one or more Markdown files, and a `_config.yml` file. [See an example repository](https://github.com/pmarsceill/jtd-remote)</small>
-
-### Local installation: Use the gem-based theme
-
-1. Install the Ruby Gem
-
-```bash
-$ gem install just-the-docs
-```
-
-```yaml
-# .. or add it to your your Jekyll site’s Gemfile
-gem "just-the-docs"
-```
-
-1. Add Just the Docs to your Jekyll site’s `_config.yml`
-
-```yaml
-theme: "just-the-docs"
-```
-
-1. _Optional:_ Initialize search data (creates `search-data.json`)
-
-```bash
-$ bundle exec just-the-docs rake search:init
-```
-
-1. Run you local Jekyll server
-
-```bash
-$ jekyll serve
-```
-
-```bash
-# .. or if you're using a Gemfile (bundler)
-$ bundle exec jekyll serve
-```
-
-1. Point your web browser to [http://localhost:4000](http://localhost:4000)
-
-If you're hosting your site on GitHub Pages, [set up GitHub Pages and Jekyll locally](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll) so that you can more easily work in your development environment.
-
-### Configure Just the Docs
-
-* See configuration options
-
-***
-
-## About the project
-
-Just the Docs is © 2017-2019 by [Patrick Marsceill](http://patrickmarsceill.com).
-
-### License
-
-Just the Docs is distributed by an [MIT license](https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt).
+VNKit has been designed with a wide range of use cases in mind, from hypertext interactive fiction to visual puzzle-based adventure games, but also designed so that complex features will stay out of your way until you need them. We hope you will be able to invent entirely new genres of visual novel with our plugin.
