@@ -24,7 +24,7 @@ aux_links:
     - "https://github.com/pmarsceill/just-the-docs"
 
 # Footer content appears at the bottom of every page's main content
-footer_content: "VNKit and the text of the VNKit documentation is copyright &copy; <a href=\"http://axile.studio\">Axile Studio</a>. This documentation is built in Just the Docs, copyright &copy; 2017-2019 Patrick Marsceill, and distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+footer_content: "VNKit and the text of the VNKit documentation is copyright &copy; <a href=\"http://axile.studio\">Axile Studio</a>. This documentation is built in <a href=\"https://github.com/pmarsceill/just-the-docs\">Just the Docs</a>, copyright &copy; 2017-2019 Patrick Marsceill. Just The Docs is distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
 
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: dark
