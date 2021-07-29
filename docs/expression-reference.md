@@ -16,38 +16,38 @@ Expressions are used in the Set variable action, in the Condition box on the nod
 Expressions are built up out of _values_ and _operators_. Values come in five basic types:
 
 * **Numbers.** Numbers can be positive or negative and written with or without a decimal point. Numeric values can be used to represent a character's opinion of the player, statistics like health points or courage, money, or a score.
-* **Strings.** A string is a piece of text enclosed in double quotes (""). If you want to put double-quotes _inside_ a string, you have to write them with a backslash like this: \\"  
-    
-   "You shout \\"Hey!\\", but all you hear is an echo."
+* **Strings.** A string is a piece of text enclosed in double quotes (""). If you want to put double-quotes _inside_ a string, you have to write them with a backslash like this: \\"
+
+  "You shout \"Hey!\", but all you hear is an echo."
 * **Booleans.** These can either be true or false. Boolean variables are often used to remember choices the player has made or scenes that have elapsed, so they can affect the story later; this type of variable is often known as a "flag" or a "switch".
-* **Arrays.** These are lists that can contain other values. You create them using squackets, like this: \["garlic", "lemon juice", "oregano"\]  
-    
-   Arrays can contain any kind of data, including other arrays. You can think of an array as a numbered list, where the first entry in the list is numbered 0. To get an individual element stored in an array, use the name of the array followed by the index number, in square brackets, of the element you want.  
-    
-   `ingredients\[0\] -> "garlic"`  
-    
-   `ingredients\[1\] -> "lemon juice"`  
-    
-   `ingredients\[2\] -> "oregano"`  
-    
-   Arrays can be useful for storing player inventories, or lists of locations or clues.
+* **Arrays.** These are lists that can contain other values. You create them using squackets, like this: `["garlic", "lemon juice", "oregano"]`
+
+  Arrays can contain any kind of data, including other arrays. You can think of an array as a numbered list, where the first entry in the list is numbered 0. To get an individual element stored in an array, use the name of the array followed by the index number, in square brackets, of the element you want.
+
+  `ingredients[0] -> "garlic"`
+
+  `ingredients[1] -> "lemon juice"`
+
+  `ingredients[2] -> "oregano"`
+
+  Arrays can be useful for storing player inventories, or lists of locations or clues.
 * **Objects ##TODO**
 * **Stored expressions ##TODO**
 * **Null.** A value that represents nothing. This shows up when reading a variable that doesn't exist, when accessing an array element that doesn't exist, and more generally when you least expect it.
 
 There are also _variables_ and _functions_; variables can store any of these five types, and functions can return them.
 
-* **Variables** are created by the "Set variable" action, and can contain anything. You'll use variables all the time for tracking important story information; they're saved when the player saves the game.  
+* **Variables** are created by the "Set variable" action, and can contain anything. You'll use variables all the time for tracking important story information; they're saved when the player saves the game.
   ![](https://lh4.googleusercontent.com/USVYdqMR8iS41xLNj06jp0iM_dypE64xK6nqqx-pmP-wLr--k6gAEX7SnRBBClUSn_xUW6gRHZOC5lFIkpZ1cUtQMNycBpvbYi_Ad_92lf7KvIFnBME8qxDGTXoxh1p36YktOu-L =319x123)
-* **Functions** are special operations built into VNKit. To call a function, use its name followed by a set of brackets. The brackets contain the _parameters_ (values) you want to give to the function. Examples:  
-    
-   `round(2.4)` -> This returns 2.  
-    
-   `push(array, 10)` -> This puts the number 10 on the end of the array called array.  
-    
-   `max(\[4, 5, 6\])` -> This returns 6, the highest value in the array \[4, 5, 6\].  
-    
-   A full list of available functions is given in the **Functions** section below.
+* **Functions** are special operations built into VNKit. To call a function, use its name followed by a set of brackets. The brackets contain the _parameters_ (values) you want to give to the function. Examples:
+
+  `round(2.4)` -> This returns 2.
+
+  `push(array, 10)` -> This puts the number 10 on the end of the array called array.
+
+  `max([4, 5, 6])` -> This returns 6, the highest value in the array \[4, 5, 6\].
+
+  A full list of available functions is given in the **Functions** section below.
 
 ## Comparisons
 
@@ -165,43 +165,43 @@ Rounds the number `n` _up_ to the nearest integer. Negative values will be round
 
 Returns the current date, in the local timezone, as an array in the following format:
 
-`d\[0\]` -> Year
+`d[0]` -> Year
 
-`d\[1\]` -> Month
+`d[1]` -> Month
 
-`d\[2\]` -> Day
+`d[2]` -> Day
 
 ### **dateTime()**
 
 Returns the current date and time, in the local timezone, as an array in the following format:
 
-`d\[0\]` -> Year
+`d[0]` -> Year
 
-`d\[1\]` -> Month
+`d[1]` -> Month
 
-`d\[2\]` -> Day
+`d[2]` -> Day
 
-`d\[3\]` -> Hour
+`d[3]` -> Hour
 
-`d\[4\]` -> Minute
+`d[4]` -> Minute
 
-`d\[5\]` -> Second
+`d[5]` -> Second
 
 ### **dateUTC()**
 
 Returns the current date and time, in the UTC timezone, as an array in the following format:
 
-`d\[0\]` -> Year
+`d[0]` -> Year
 
-`d\[1\]` -> Month
+`d[1]` -> Month
 
-`d\[2\]` -> Day
+`d[2]` -> Day
 
-`d\[3\]` -> Hour
+`d[3]` -> Hour
 
-`d\[4\]` -> Minute
+`d[4]` -> Minute
 
-`d\[5\]` -> Second
+`d[5]` -> Second
 
 ### **find(a, v)**
 
@@ -209,9 +209,9 @@ Searches the array `a` for the value `v` and returns its index (position) in the
 
 If `a` does not contain `v` then the result is `null`; this can be useful to check whether an array contains a particular value.
 
-`find(\["red", "green", "blue"\], "green")` -> Returns 1.
+`find(["red", "green", "blue"], "green")` -> Returns 1.
 
-`find(\["red", "green", "blue"\], "purple")` -> Returns null.
+`find(["red", "green", "blue"], "purple")` -> Returns null.
 
 ### **floor(n)**
 
@@ -285,27 +285,27 @@ Rounds a number to the nearest whole number. Numbers ending in `.5` will be roun
 
 Returns the current real-world time, in the local timezone, as an array in the following format:
 
-`t\[0\]` -> Hour
+`t[0]` -> Hour
 
-`t\[1\]` -> Minute
+`t[1]` -> Minute
 
-`t\[2\]` -> Second
+`t[2]` -> Second
 
 ### **timeSince(t)**
 
 Returns the real-world time elapsed since the time t, in the local timezone. t is an array in the following format:
 
-`t\[0\]` -> Year
+`t[0]` -> Year
 
-`t\[1\]` -> Month
+`t[1]` -> Month
 
-`t\[2\]` -> Day
+`t[2]` -> Day
 
-`t\[3\]` -> Hour (Optional)
+`t[3]` -> Hour (Optional)
 
-`t\[4\]` -> Minute (Mandatory if hour is specified)
+`t[4]` -> Minute (Mandatory if hour is specified)
 
-`t\[5\]` -> Second (Optional)
+`t[5]` -> Second (Optional)
 
 The return value is in the same format (with all optional values filled).
 
@@ -313,26 +313,26 @@ The return value is in the same format (with all optional values filled).
 
 Returns the current real-world time, in the UTC timezone, as an array in the following format:
 
-`t\[0\]` -> Hour
+`t[0]` -> Hour
 
-`t\[1\]` -> Minute
+`t[1]` -> Minute
 
-`t\[2\]` -> Second
+`t[2]` -> Second
 
 ### **utcSince(t)**
 
 Returns the real-world time elapsed since the time `t`, in the UTC timezone. `t` is an array in the following format:
 
-`t\[0\]` -> Year
+`t[0]` -> Year
 
-`t\[1\]` -> Month
+`t[1]` -> Month
 
-`t\[2\]` -> Day
+`t[2]` -> Day
 
-`t\[3\]` -> Hour (Optional)
+`t[3]` -> Hour (Optional)
 
-`t\[4\]` -> Minute (Mandatory if hour is specified)
+`t[4]` -> Minute (Mandatory if hour is specified)
 
-`t\[5\]` -> Second (Optional)
+`t[5]` -> Second (Optional)
 
 The return value is in the same format (with all optional values filled).
