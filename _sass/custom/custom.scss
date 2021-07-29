@@ -3,6 +3,12 @@ a {
     color: #33affa;
 }
 
+a:visited {
+
+    color: #3e88b5;
+
+}
+
 body {
 
     background-color: #3d3d3d;
@@ -52,4 +58,12 @@ code {
     border: 0px;
     border-radius: 0px;
 
+}
+
+h1, .text-alpha {
+    font-size: 45px !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffb333;
 }
