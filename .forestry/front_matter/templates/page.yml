@@ -26,3 +26,4 @@ fields:
 pages:
 - docs/expression-reference.md
 - docs/node-cheatsheet.md
+- docs/setting-up-vnkit.md
