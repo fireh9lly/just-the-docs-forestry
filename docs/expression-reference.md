@@ -2,14 +2,14 @@
 layout: default
 has_children: false
 title: Expression reference
-nav_order: 
+nav_order: 2
 
 ---
 # Expression reference
 
 In VNKit, you use _expressions_ to write your game's variables and implement conditional branching. Most expressions are simple to understand and write, but they can be combined to allow for more complex effects.
 
-Expressions are used in the Set variable action, in the Condition box on the node editor, and in a few other places.
+Expressions are used in the Set variable Action, in the Condition box on the Node editor, and in a few other places.
 
 ## Simple expressions
 
@@ -18,7 +18,7 @@ Expressions are built up out of _values_ and _operators_. Values come in five ba
 * **Numbers.** Numbers can be positive or negative and written with or without a decimal point. Numeric values can be used to represent a character's opinion of the player, statistics like health points or courage, money, or a score.
 * **Strings.** A string is a piece of text enclosed in double quotes (""). If you want to put double-quotes _inside_ a string, you have to write them with a backslash like this: \\"
 
-  "You shout \"Hey!\", but all you hear is an echo."
+      "You shout \"Hey!\", but all you hear is an echo."
 * **Booleans.** These can either be true or false. Boolean variables are often used to remember choices the player has made or scenes that have elapsed, so they can affect the story later; this type of variable is often known as a "flag" or a "switch".
 * **Arrays.** These are lists that can contain other values. You create them using squackets, like this: `["garlic", "lemon juice", "oregano"]`
 
