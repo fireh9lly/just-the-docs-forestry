@@ -1,13 +1,13 @@
-body {
-
-    background-color: #3d3d3d;
-    color: #cccccc;
-}
-
 $link-color: #33affa !important;
 
 .search-active .search-input {
-    background-color: #cccccc;
+    background-color: #363636;
+}
+
+.search-input {
+
+    color: #cccccc;
+
 }
 
 
@@ -16,6 +16,11 @@ $link-color: #33affa !important;
     background-color: #363636;
 }
 
+body {
+
+    background-color: #3d3d3d;
+    color: #cccccc;
+}
 
 .text-grey-dk-100 {
 
@@ -55,7 +60,7 @@ div.highlighter-rouge {
 
 code {
 
-    color: #ffffff;
+    color: #ffffff;    
     padding: 0.25em;
     background-color: #303030;
     border: 0px;
