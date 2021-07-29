@@ -21,6 +21,10 @@ body {
 
 }
 
+.main-content .anchor-heading svg {
+    color: inherit;
+}
+
 .site-header {
 
     border-bottom: 0px;
@@ -44,7 +48,7 @@ div.highlighter-rouge {
 code {
 
     padding: 0.25em;
-    background-color: #303030;  
+    background-color: #303030;
     border: 0px
     border-radius: 0px;
 
