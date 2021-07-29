@@ -11,14 +11,14 @@ fields:
 - type: text
   name: title
   label: title
-- type: textarea
-  name: description
-  label: description
 - name: nav_order
   type: text
   config:
     required: false
   label: nav_order
+- type: textarea
+  name: description
+  label: description
 - type: text
   name: permalink
   label: permalink
