@@ -24,6 +24,7 @@ fields:
     required: false
   label: permalink
 pages:
+- docs/Hey look at this/fart.md
 - docs/configuration/configuration.md
 - docs/docs-here.md
 - docs/navigation-structure.md
