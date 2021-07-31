@@ -12,7 +12,7 @@ fields:
   name: title
   label: title
 - name: nav_order
-  type: text
+  type: number
   config:
     required: false
   label: nav_order
