@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Welcome to VNKit!
-nav_order: "1"
+nav_order: 1
 description: Introduction to the documentation for VNKit - a creative visual novel
   building plugin for Unity.
 permalink: "/"
