@@ -176,7 +176,7 @@ Check conditions for triggering Bolt's introduction scene. The player can only e
 
 Rolls three six sided dice, divides the result by 2, rounds it up, and returns true if the result is less than or equal to Astra's current affection level.
 
-`min(\[rowleyHealth, winifredHealth, obericHealth\]) < 250 and find(statusEffects, "curse") = null`
+`min([rowleyHealth, winifredHealth, obericHealth]) < 250 and find(statusEffects, "curse") = null`
 
 In this example, we only want to summon the Vitæ Spirit from Chapter 1 if the health of any three characters has fallen below 250, and the party is not currently under a "curse" effect.
 
