@@ -13,14 +13,14 @@ Expressions are used in the Set variable Action, in the Condition box on the Nod
 
 ## Simple expressions
 
-Expressions are built up out of _values_ and _operators_. Values come in five basic types:
+Expressions are built up out of _values_ and _operators_. Values come in seven basic types:
 
 * **Numbers.** Numbers can be positive or negative and written with or without a decimal point. Numeric values can be used to represent a character's opinion of the player, statistics like health points or courage, money, or a score.
 * **Strings.** A string is a piece of text enclosed in double quotes (""). If you want to put double-quotes _inside_ a string, you have to write them with a backslash like this: \\"
-
-      "You shout \"Hey!\", but all you hear is an echo."
+`"You shout \"Hey!\", but all you hear is an echo."`
 * **Booleans.** These can either be true or false. Boolean variables are often used to remember choices the player has made or scenes that have elapsed, so they can affect the story later; this type of variable is often known as a "flag" or a "switch".
-* **Arrays.** These are lists that can contain other values. You create them using squackets, like this: `["garlic", "lemon juice", "oregano"]`
+* **Arrays.** These are lists that can contain other values. You create them using squackets, like this: 
+  `["garlic", "lemon juice", "oregano"]`
 
   Arrays can contain any kind of data, including other arrays. You can think of an array as a numbered list, where the first entry in the list is numbered 0. To get an individual element stored in an array, use the name of the array followed by the index number, in square brackets, of the element you want.
 
@@ -31,11 +31,47 @@ Expressions are built up out of _values_ and _operators_. Values come in five ba
   `ingredients[2]` -> `"oregano"`
 
   Arrays can be useful for storing player inventories, or lists of locations or clues.
-* **Objects ##TODO**
-* **Stored expressions ##TODO**
+* **Objects.** Objects are similar to arrays, but use words (strings) to index their contents instead of numbers. Objects are created using braces, like this: 
+  `
+  {
+    title "Frankenstein; or, The Modern Prometheus", 
+    author "Mary Shelley", 
+    year 1818
+  }
+  `
+
+  Like arrays, objects can contain any kind of data. The contents of an object can be accessed using the **dot** operator, like this:
+  
+  `book.title` -> `"Frankenstein; or, The Modern Prometheus"`
+  `book.author` -> `"Mary Shelley"`
+  `book.year` -> `1818`
+  
+  Objects have a variety of uses for storing and representing game data. Several of VNKit's built-in functions make use of objects.
+  
+* **Stored expressions.** A stored expression is a special type of value that allows a piece of code to be stored and passed around like any other variable. The `call()` function is used to retrieve a value from a stored expression, and can accept an object that will modify the expression's behaviour.
+
+  You can create a stored expression by writing a colon, then placing the expression in brackets, like this:
+  
+  `:(4 * 8)` -> Creates a stored expression representing the calculation `4 * 8`.
+  
+  This can then be placed in a variable using a **SetVariable** action. For example, if you stored the expression above in the global variable `calc`, then later in your game you could retrieve its value using the `call()` function:
+  
+  `call(calc)` -> `32`
+  
+  You can also use variable in stored expressions, exactly the same as in regular code:
+  
+  `:(4 * v)` -> Creates a stored expression representing the calculation `4 * v`. `v` may or may not be defined at the time the expression is created, but the value of `v` is not accessed until this expression is used by the `call()` function. However, if `v` has not been set to a number value before this stored expression is called, the system will raise an error.
+  
+  The final important feature of stored expressions is *scope*. In VNKit, a scope is the "context" in which an expression is used; by changing this context, the behaviour of the expression can be altered. Scopes can be specified as the second argument to the `call()` function, and they are defined using object syntax:
+  
+  `call(exp, {v 16})` -> Evaluates the stored expression `exp` using the scope `{v 16}`. If `exp` as the value `:(4 * v)`, as above, the resulting value will be `4 * 16`: `64`.
+  
+  When using scopes with stored expressions, keep in mind that the variables in the scope will temporarily 'override' global variables. For example, if your game has a global variable `v` with the value `8`, and at some point also uses the stored expression `:(4 * v)` with the scope `{v 16}`, then the expression will be evaluated as `:(4 * 16)` (using the scope variable), not `:(4 * 8)` (using the global variable). Any variable names not defined in the scope you provide will be interpreted as global variables, as normal.
+
+  VNKit's database system uses stored expressions for searching through data tables, but they have many other uses as well.
 * **Null.** A value that represents nothing. This shows up when reading a variable that doesn't exist, when accessing an array element that doesn't exist, and more generally when you least expect it.
 
-There are also _variables_ and _functions_; variables can store any of these five types, and functions can return them.
+There are also _variables_ and _functions_; variables can store any of these seven types, and functions can return them.
 
 * **Variables** are created by the "Set variable" action, and can contain anything. You'll use variables all the time for tracking important story information; they're saved when the player saves the game.
   ![](https://lh4.googleusercontent.com/USVYdqMR8iS41xLNj06jp0iM_dypE64xK6nqqx-pmP-wLr--k6gAEX7SnRBBClUSn_xUW6gRHZOC5lFIkpZ1cUtQMNycBpvbYi_Ad_92lf7KvIFnBME8qxDGTXoxh1p36YktOu-L =319x123)
