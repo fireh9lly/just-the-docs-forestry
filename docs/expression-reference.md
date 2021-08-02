@@ -180,17 +180,19 @@ Rolls three six sided dice, divides the result by 2, rounds it up, and returns t
 
 In this example, we only want to summon the Vitæ Spirit from Chapter 1 if the health of any three characters has fallen below 250, and the party is not currently under a "curse" effect.
 
-## **Function list**
+## Function list
 
-### **call(e)**
+### call(e)
 
-Calls (evaluates) the stored expression `e` and returns the result.
+### call(e, scope)
 
-### **ceil(n)**
+Calls (evaluates) the stored expression `e` and returns the result. The optional `scope` parameter is an object that can be used to control the evaluation behaviour of `e`; see the section on **Stored expressions** above.
+
+### ceil(n)
 
 Rounds the number `n` _up_ to the nearest integer. Negative values will be rounded towards zero. Returns a number.
 
-### **date()**
+### date()
 
 Returns the current date, in the local timezone, as an array in the following format:
 
@@ -200,7 +202,7 @@ Returns the current date, in the local timezone, as an array in the following fo
 
 `d[2]` -> Day
 
-### **dateTime()**
+### dateTime()
 
 Returns the current date and time, in the local timezone, as an array in the following format:
 
@@ -216,7 +218,7 @@ Returns the current date and time, in the local timezone, as an array in the fol
 
 `d[5]` -> Second
 
-### **dateUTC()**
+### dateUTC()
 
 Returns the current date and time, in the UTC timezone, as an array in the following format:
 
@@ -232,7 +234,7 @@ Returns the current date and time, in the UTC timezone, as an array in the follo
 
 `d[5]` -> Second
 
-### **find(a, v)**
+### find(a, v)
 
 Searches the array `a` for the value `v` and returns its index (position) in the array. The first element is at index 0.
 
@@ -242,23 +244,61 @@ If `a` does not contain `v` then the result is `null`; this can be useful to che
 
 `find(["red", "green", "blue"], "purple")` -> Returns null.
 
-### **floor(n)**
+### floor(n)
 
 Rounds the number `n` _down_ to the nearest integer. Negative values will be rounded away from zero. Returns a number.
 
-### **generate(string)**
+### generate(string)
 
 Returns a value from the Generator with the given name. Generators are created and managed using the Generator Editor.
 
-### **getTimer(string)**
+### getData(table, exp)
+
+Retrieves a list of values from the data table with the name `table`. The expression `exp` determines which values to retrieve, and is used in the following way:
+
+For each row in the table, the value of `exp` is calculated as if the `call()` function were applied, using `exp` and the row object as parameters. In essence, the row object is used here as a _scope_ (see **Stored expressions** above) to control the evaluation of `exp`.
+
+For example: imagine your game has a data table called `Characters`, and each row in that table has an `allegiance` which can be `"friendly"`, `"neutral"`, or `"hostile"`. You can then retrieve an array of all the `"friendly"` characters in the game with the following call:
+
+`getData("Characters", :(allegiance = "friendly"))`
+
+The rows are returned as objects, whose field names correspond to the respective columns in the database.
+
+### getDataRange(table)
+
+### getDataRange(table, start)
+
+### getDataRange(table, start, count)
+
+Retrieves an array of numbered rows from a table. 
+
+Called with no parameters, `getDataRange()` will return the whole table. 
+
+With `start` set to a number, and `count` left undefined, `getDataRange()` will return all the rows in sequence, beginning at `start`.
+
+With both `start` and `count` defined, the return value will be an array of table rows beginning at `start` with its length equal to `count`, or as many rows as are available in the table, whichever is less.
+
+### getDataRow(table, row)
+
+Retrieves a single numbered row from a data table.
+
+### getSaveData(filename)
+
+Retrieves the data stored in the save file referred to by `filename`, as an object. The value of `filename` should usually be of the format `Save1`, `Save2`, `Save3`, etc. `Save0` is a special save file reserved for quicksaving.
+
+### getSaveSlots()
+
+Retrieves an array of available save slot names, as strings. Thes can be used with `getSaveData()`.
+
+### getTimer(string)
 
 Returns the current value of a timer with the given name. If the timer does not exist or has finished, this function returns `null`.
 
-### **len(value)**
+### len(value)
 
 Returns the number of elements in an array, or the length of a string (the number of characters in the string).
 
-### **insert(array, index, value)**
+### insert(array, index, value)
 
 Creates a new copy of the array **array**, with the **value** inserted at the position **index**. The value is placed immediately before the current element in that position (if any), so
 
@@ -268,9 +308,9 @@ will make a copy of `array`, place the string `"bees"` at the start, and return 
 
 If `index` is less than `0` or greater than the size of `array`, the return value will be the same as `array`. If `index` is equal to `length(array)` then `value` will be placed at the end of the new copy of `array`.
 
-### **max(number0, number1, number2...)**
+### max(number0, number1, number2...)
 
-### **max(array)**
+### max(array)
 
 Returns the highest of a list of numbers, or the highest number in an array.
 
@@ -278,9 +318,9 @@ You can use this to prevent a value going under a minimum threshold, like this:
 
 ![](https://lh3.googleusercontent.com/Kx2lEYi2AHQ9kHSHuzQzZnXsFbAbp5iOR_yVj5cukG8bSZdW8JNr14j6gUj2Y92Civu7RR86r-k8SG5LAqBXqtsTYs9dXBv6YxoAA3qMoTAsVE3MGBCn4AhpEjCfos2PITED8jZE)
 
-### **min(number0, number1, number2...)**
+### min(number0, number1, number2...)
 
-### **min(array)**
+### min(array)
 
 Returns the lowest of a list of numbers, or the lowest number in an array.
 
@@ -288,29 +328,29 @@ You can use this to prevent a value going over a maximum threshold, like this:
 
 ![](https://lh3.googleusercontent.com/MKUBdL4YZiAW05RlB6ZdJxQmkSPxpXfd7-VAX9cknEiuiKSRIfMzSrerTfsE3dl9_MfI4U6MpOWHubY6mwMb5BSWL-g_S46BRu9wxcL-sdNzKh4pCsMaOU1KFAaFQNMuFTtk-Jvj)
 
-### **pop(array)**
+### pop(array)
 
 Returns a new copy of `array` with one value removed from the end. If **array** is empty this will return an empty array.
 
-### **push(array, value)**
+### push(array, value)
 
 Returns a new copy of `array` with `value` added to the end.
 
-### **remove(array, index)**
+### remove(array, index)
 
 Creates a new copy of `array` with the value at `index` removed. `index` must be a number (non-integer numbers will be rounded down). If `index` is less than `0` or greater than `length(array)-1`, the return value will be the same as `array`..
 
-### **roll(dice, sides)**
+### roll(dice, sides)
 
-### **roll(sides)**
+### roll(sides)
 
 Rolls a number of dice, adds them up, and returns the result.
 
-### **round(number)**
+### round(number)
 
 Rounds a number to the nearest whole number. Numbers ending in `.5` will be rounded up.
 
-### **time()**
+### time()
 
 Returns the current real-world time, in the local timezone, as an array in the following format:
 
@@ -320,7 +360,7 @@ Returns the current real-world time, in the local timezone, as an array in the f
 
 `t[2]` -> Second
 
-### **timeSince(t)**
+### timeSince(t)
 
 Returns the real-world time elapsed since the time t, in the local timezone. t is an array in the following format:
 
@@ -338,7 +378,7 @@ Returns the real-world time elapsed since the time t, in the local timezone. t i
 
 The return value is in the same format (with all optional values filled).
 
-### **utc()**
+### utc()
 
 Returns the current real-world time, in the UTC timezone, as an array in the following format:
 
@@ -348,7 +388,7 @@ Returns the current real-world time, in the UTC timezone, as an array in the fol
 
 `t[2]` -> Second
 
-### **utcSince(t)**
+### utcSince(t)
 
 Returns the real-world time elapsed since the time `t`, in the UTC timezone. `t` is an array in the following format:
 
