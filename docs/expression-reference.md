@@ -20,26 +20,24 @@ Expressions are built up out of _values_ and _operators_. Values come in seven b
   `"You shout \"Hey!\", but all you hear is an echo."`
 * **Booleans.** These can either be true or false. Boolean variables are often used to remember choices the player has made or scenes that have elapsed, so they can affect the story later; this type of variable is often known as a "flag" or a "switch".
 * **Arrays.** These are lists that can contain other values. You create them using squackets, like this:
-  
+
   `["garlic", "lemon juice", "oregano"]`
 
   Arrays can contain any kind of data, including other arrays. You can think of an array as a numbered list, where the first entry in the list is numbered 0. To get an individual element stored in an array, use the name of the array followed by the index number, in square brackets, of the element you want.
 
-  `ingredients[0]` -> `"garlic"`
-
-  `ingredients[1]` -> `"lemon juice"`
-
+  `ingredients[0]` -> `"garlic"`\
+  `ingredients[1]` -> `"lemon juice"`\
   `ingredients[2]` -> `"oregano"`
 
   Arrays can be useful for storing player inventories, or lists of locations or clues.
 * **Objects.** Objects are similar to arrays, but use words (strings) to index their contents instead of numbers. Objects are created using braces, like this:
-  
+
   `{ title "Frankenstein; or, The Modern Prometheus", author "Mary Shelley", year 1818 }`
 
   Like arrays, objects can contain any kind of data. The contents of an object can be accessed using the **dot** operator, like this:
 
-  `book.title` -> `"Frankenstein; or, The Modern Prometheus"`
-  `book.author` -> `"Mary Shelley"`
+  `book.title` -> `"Frankenstein; or, The Modern Prometheus"`\
+  `book.author` -> `"Mary Shelley"`\
   `book.year` -> `1818`
 
   Objects have a variety of uses for storing and representing game data. Several of VNKit's built-in functions make use of objects.
