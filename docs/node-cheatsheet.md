@@ -55,7 +55,7 @@ The Node's text will be displayed in the game if the _textbox_ is visible, as we
 
 A Node with nothing on it will not do anything. Control will immediately flow to the first available connected Node. Empty Nodes with outgoing connectors are therefore useful as "hubs" or "selectors" that branch the story depending on variables. (See Node #4 in the below example.)
 
-!\[\](https://lh3.googleusercontent.com/EoZXei52MmiHlfS4OfbNI2yvbvONnyp-4_GfqOp8OjjiwAtqjWmIY54rKocivA8zWOHTTnRhzMem6rewr932SH_8Z5AQ-x2a-UiHBrOfnJxj138TLIpz2NrInafi4zsID7MYoEJX)
+![](https://lh3.googleusercontent.com/EoZXei52MmiHlfS4OfbNI2yvbvONnyp-4_GfqOp8OjjiwAtqjWmIY54rKocivA8zWOHTTnRhzMem6rewr932SH_8Z5AQ-x2a-UiHBrOfnJxj138TLIpz2NrInafi4zsID7MYoEJX)
 
 If the Node has choices on it, the game will wait for the player to choose one before continuing.
 
@@ -305,13 +305,13 @@ Stops a backstage process. If you need to run it again, you will need to create 
 
 Inside a node's text, you can use a simple form of markup to control formatting. This uses a syntax based on [Markdown](https://daringfireball.net/projects/markdown/):
 
-**Italics:** Use \**asterisks*\*
+**Italics:__ Use *_asterisks_*
 
-**Bold text:** Use \*\***double asterisks**\*\*
+**Bold text:__ Use ****double asterisks__**
 
-**Bold italics:** Use \*\*\****triple asterisks***\*\*\*
+**Bold italics:__ Use *****_triple asterisks___***
 
-**Underlining:** Use \_\_<u>double underscores</u>\_\_
+**Underlining:** Use __<u>double underscores</u>__
 
 **Links:** \[This is a link:23\] will create a link to the node with ID 23, highlighted in blue; when the user clicks the link, the story will jump to node 23. In NVL mode, links will deactivate when clicked on, after which they will look the same as ordinary text. Links are therefore useful for making hypertext interactive fiction. Note: Links only allow you to link elsewhere in the game: they do not allow you to link to external websites.
 
