@@ -20,6 +20,7 @@ Expressions are built up out of _values_ and _operators_. Values come in seven b
   `"You shout \"Hey!\", but all you hear is an echo."`
 * **Booleans.** These can either be true or false. Boolean variables are often used to remember choices the player has made or scenes that have elapsed, so they can affect the story later; this type of variable is often known as a "flag" or a "switch".
 * **Arrays.** These are lists that can contain other values. You create them using squackets, like this:
+  
   `["garlic", "lemon juice", "oregano"]`
 
   Arrays can contain any kind of data, including other arrays. You can think of an array as a numbered list, where the first entry in the list is numbered 0. To get an individual element stored in an array, use the name of the array followed by the index number, in square brackets, of the element you want.
@@ -32,6 +33,7 @@ Expressions are built up out of _values_ and _operators_. Values come in seven b
 
   Arrays can be useful for storing player inventories, or lists of locations or clues.
 * **Objects.** Objects are similar to arrays, but use words (strings) to index their contents instead of numbers. Objects are created using braces, like this:
+  
   `{ title "Frankenstein; or, The Modern Prometheus", author "Mary Shelley", year 1818 }`
 
   Like arrays, objects can contain any kind of data. The contents of an object can be accessed using the **dot** operator, like this:
@@ -68,7 +70,7 @@ There are also _variables_ and _functions_; variables can store any of these sev
 
 * **Variables** are created by the "Set variable" action, and can contain anything. You'll use variables all the time for tracking important story information; they're saved when the player saves the game.
   ![](https://lh4.googleusercontent.com/USVYdqMR8iS41xLNj06jp0iM_dypE64xK6nqqx-pmP-wLr--k6gAEX7SnRBBClUSn_xUW6gRHZOC5lFIkpZ1cUtQMNycBpvbYi_Ad_92lf7KvIFnBME8qxDGTXoxh1p36YktOu-L)
-* **Functions** are special operations built into VNKit. To call a function, use its name followed by a set of brackets. The brackets contain the _parameters_ (values) you want to give to the function. Examples:
+* **Functions** are special operations built into VNKit. To call a function, use its name followed by a set of brackets. The brackets contain the _arguments_ (values) you want to give to the function. Examples:
 
   `round(2.4)` -> This returns 2.
 
@@ -252,17 +254,21 @@ Rounds the number `n` _down_ to the nearest integer. Negative values will be rou
 
 Returns a value from the Generator with the given name. Generators are created and managed using the Generator Editor.
 
+### getData(table)
+
 ### getData(table, exp)
 
-Retrieves a list of values from the data table with the name `table`. The expression `exp` determines which values to retrieve, and is used in the following way:
+Retrieves a list of values from the database. `table` is a string containing the name of the database table to query. If no value is given for `exp`, the whole table is returned.
 
-For each row in the table, the value of `exp` is calculated as if the `call()` function were applied, using `exp` and the row object as parameters. In essence, the row object is used here as a _scope_ (see **Stored expressions** above) to control the evaluation of `exp`.
+The optional expression `exp` determines which values to retrieve, and is used in the following way:
+
+For each row in the table, the value of `exp` is calculated as if the `call()` function were applied, using `exp` and the row object as arguments. In essence, the row object is used here as a _scope_ (see **Stored expressions** above) to control the evaluation of `exp`.
 
 For example: imagine your game has a data table called `Characters`, and each row in that table has an `allegiance` which can be `"friendly"`, `"neutral"`, or `"hostile"`. You can then retrieve an array of all the `"friendly"` characters in the game with the following call:
 
 `getData("Characters", :(allegiance = "friendly"))`
 
-The rows are returned as objects, whose field names correspond to the respective columns in the database.
+The rows are returned as objects, whose field names correspond to the columns in the data table
 
 ### getDataRange(table)
 
@@ -270,11 +276,11 @@ The rows are returned as objects, whose field names correspond to the respective
 
 ### getDataRange(table, start, count)
 
-Retrieves an array of numbered rows from a table. 
+Retrieves an array of numbered rows from a table, as objects.
 
-Called with no parameters, `getDataRange()` will return the whole table. 
+Called with only a table name (string) as an argument, `getDataRange()` will return the whole table; this is the same as calling `getData(table)`.
 
-With `start` set to a number, and `count` left undefined, `getDataRange()` will return all the rows in sequence, beginning at `start`.
+With `start` given as a number, and `count` left undefined, `getDataRange()` will return all the table's rows in sequence, beginning at `start`.
 
 With both `start` and `count` defined, the return value will be an array of table rows beginning at `start` with its length equal to `count`, or as many rows as are available in the table, whichever is less.
 
@@ -318,6 +324,8 @@ You can use this to prevent a value going under a minimum threshold, like this:
 
 ![](https://lh3.googleusercontent.com/Kx2lEYi2AHQ9kHSHuzQzZnXsFbAbp5iOR_yVj5cukG8bSZdW8JNr14j6gUj2Y92Civu7RR86r-k8SG5LAqBXqtsTYs9dXBv6YxoAA3qMoTAsVE3MGBCn4AhpEjCfos2PITED8jZE)
 
+It's easy to get `max()` and `min()` confused when using them this way, so make sure to double-check: `max()` is used to keep something _above a minimum_ (by selecting the higher of the two values) and `min()` is used to keep something _below a maximum_ (by selecting the lower of the two).
+
 ### min(number0, number1, number2...)
 
 ### min(array)
@@ -328,9 +336,11 @@ You can use this to prevent a value going over a maximum threshold, like this:
 
 ![](https://lh3.googleusercontent.com/MKUBdL4YZiAW05RlB6ZdJxQmkSPxpXfd7-VAX9cknEiuiKSRIfMzSrerTfsE3dl9_MfI4U6MpOWHubY6mwMb5BSWL-g_S46BRu9wxcL-sdNzKh4pCsMaOU1KFAaFQNMuFTtk-Jvj)
 
+As with `max()`, remember that in some circumstances this usage can be counter-intuitive, so make sure to double check which of the two functions you're using: `min()` should be used to maintain something _below a maximum_, by selecting the lower of two values.
+
 ### pop(array)
 
-Returns a new copy of `array` with one value removed from the end. If **array** is empty this will return an empty array.
+Returns a new copy of `array` with one value removed from the end. If **array** is empty, this will return an empty array.
 
 ### push(array, value)
 
