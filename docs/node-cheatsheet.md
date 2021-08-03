@@ -17,7 +17,7 @@ Nodes have _connectors_, which link them to other Nodes. These connectors contro
 
 ## Anatomy of a Node
 
-![](https://lh6.googleusercontent.com/yFIC1ZL15zqzJ_ePJjmLJ9EjR9D0Kp3fv64mfgZ82MHzeLZqBq_xZnjvuBgmhROEFqyPpwuKQlW8qN_7JOHFFSzEqmhSGK-IOdj_N8PJs3G0IFPZmWsE2wc9yvBUiWpFU_pBd8XM =406x485)
+![](https://lh6.googleusercontent.com/yFIC1ZL15zqzJ_ePJjmLJ9EjR9D0Kp3fv64mfgZ82MHzeLZqBq_xZnjvuBgmhROEFqyPpwuKQlW8qN_7JOHFFSzEqmhSGK-IOdj_N8PJs3G0IFPZmWsE2wc9yvBUiWpFU_pBd8XM)
 
 At the top of the Node are the Node's name and ID number. Both can be used to identify the Node when setting up certain actions that point to a specific place, such as hypermaps and jumps. You can also use the Node name for your own reference.
 
@@ -37,7 +37,7 @@ The large _Text_ window shows the text that will display at that point in the st
 
 The _Clear textbox_ toggle is checked by default. It means any text on the Node will replace the text from the previous Node. If this box is empty, the text in this Node will instead be appended to the text of the previous Node. You will want to uncheck this quite often in an NVL format game. In an ADV format game, you will want to leave this box checked most of the time, but unchecking the box is useful if you need to perform actions in the middle of a single text box.
 
-![](https://lh6.googleusercontent.com/f7hSKAimG6wsHmSXyE7JYBQ1MTLZgJe9f0nP839zdhE13Cxscv9xeWz-uvkhGBOhV4SsZzr9Gvx84nnd1z1tyTGaXnhxipimOXiboNI6BAUikufgEpBBn53HWODfScotIbItuiTx =624x377)
+![](https://lh6.googleusercontent.com/f7hSKAimG6wsHmSXyE7JYBQ1MTLZgJe9f0nP839zdhE13Cxscv9xeWz-uvkhGBOhV4SsZzr9Gvx84nnd1z1tyTGaXnhxipimOXiboNI6BAUikufgEpBBn53HWODfScotIbItuiTx)
 
 Next is the _action list_, which shows the actions that will be performed when the story reaches this Node. Actions can be dragged up and down to reorder them using the arrows at the left, or deleted with the X button on the right. Hovering over the action will show its full explanatory text in a tooltip; clicking on it will open the **Action Editor**.
 
@@ -55,7 +55,7 @@ The Node's text will be displayed in the game if the _textbox_ is visible, as we
 
 A Node with nothing on it will not do anything. Control will immediately flow to the first available connected Node. Empty Nodes with outgoing connectors are therefore useful as "hubs" or "selectors" that branch the story depending on variables. (See Node #4 in the below example.)
 
-![](https://lh3.googleusercontent.com/EoZXei52MmiHlfS4OfbNI2yvbvONnyp-4_GfqOp8OjjiwAtqjWmIY54rKocivA8zWOHTTnRhzMem6rewr932SH_8Z5AQ-x2a-UiHBrOfnJxj138TLIpz2NrInafi4zsID7MYoEJX =685.9628889844919x445)
+!\[\](https://lh3.googleusercontent.com/EoZXei52MmiHlfS4OfbNI2yvbvONnyp-4_GfqOp8OjjiwAtqjWmIY54rKocivA8zWOHTTnRhzMem6rewr932SH_8Z5AQ-x2a-UiHBrOfnJxj138TLIpz2NrInafi4zsID7MYoEJX)
 
 If the Node has choices on it, the game will wait for the player to choose one before continuing.
 
@@ -305,13 +305,13 @@ Stops a backstage process. If you need to run it again, you will need to create 
 
 Inside a node's text, you can use a simple form of markup to control formatting. This uses a syntax based on [Markdown](https://daringfireball.net/projects/markdown/):
 
-**Italics:__ Use *_asterisks*_
+**Italics:** Use \**asterisks*\*
 
-**Bold text:__ Use ****double asterisks__**
+**Bold text:** Use \*\***double asterisks**\*\*
 
-**Bold italics:__ Use *****_triple asterisks___***
+**Bold italics:** Use \*\*\****triple asterisks***\*\*\*
 
-**Underlining:** Use **__**double underscores__
+**Underlining:** Use \_\_<u>double underscores</u>\_\_
 
 **Links:** \[This is a link:23\] will create a link to the node with ID 23, highlighted in blue; when the user clicks the link, the story will jump to node 23. In NVL mode, links will deactivate when clicked on, after which they will look the same as ordinary text. Links are therefore useful for making hypertext interactive fiction. Note: Links only allow you to link elsewhere in the game: they do not allow you to link to external websites.
 
@@ -327,7 +327,11 @@ You can also use variables in text. To use a variable, write a dollar sign ($) f
 
 `"Ah, so your name is $playerName?"`
 
-This works for strings, numbers, booleans (represented as "true" and "false"), and arrays (which are written out in square brackets).
+This works for strings, numbers, booleans (represented as "true" and "false"), arrays (which are written out in square brackets), and even objects (displayed with their values in braces). Stored expressions can also be substituted into text, though will probably look strange.
+
+You can substitute more complex expressions by using the `$` operator and placing the expression in brackets:
+
+`"You found $coinsCollected doubloons already! If you find one more, you'll have $(coinsCollected+1)!"`
 
 ## Things to watch out for
 
@@ -340,7 +344,7 @@ In a branch, VNKit decides which Node to go to by checking the conditions of the
 Also, check you are using the right expressions:
 
 * Check that you are putting the inequality in front of the equals sign for _greater than and equal to_ and _less than and equal to_ checks - PlayerCash>=300, not PlayerCash=>300.
-* Have you accounted for all possible conditions? If you have set up a two-pathed branch for DatedMiguel>3 and DatedMiguel<3, what happens if the player has dated him exactly 3 times? A variable that is being subtracted from can go into negative numbers, which can cause unexpected behaviour if the value represents an amount that should stop counting down at 0 - e.g. remaining_apples or playerGoldPieces. Think through the mathematical logic of your branches carefully!
+* Have you accounted for all possible conditions? If you have set up a two-pathed branch for `DatedMiguel > 3` and `DatedMiguel < 3`, what happens if the player has dated him exactly 3 times? A variable that is being subtracted from can go into negative numbers, which can cause unexpected behaviour if the value represents an amount that should stop counting down at 0 - e.g. remaining_apples or playerGoldPieces. Think through the mathematical logic of your branches carefully!
 * Be careful using conditions to check for Boolean=false. When a Boolean variable cannot be found by VNKit, it defaults to _null_, not to false. Since you will usually be setting a story flag to True at the same time as you create it, it is usually better practice to check that a story flag has not been set by checking for "not Boolean", which accepts both Boolean=false and Boolean=null.
 
 ### "I have a complex project with backstage processes that isn't working as it should."
