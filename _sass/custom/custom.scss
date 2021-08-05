@@ -10,12 +10,16 @@ blockquote {
     padding: 12px;
     font-size: inherit;
     border-width: 1px;
-    border-color: #a6cbdf;
+    border-color: #201e23;
     background-color: #302d36;
     color: #cccccc;
     border-style: dashed;
     border-radius: 0px;
 	margin: 0 25px;
+}
+
+.search-input {
+	color: $body-text-color;
 }
 
 .search-active .search-input {
