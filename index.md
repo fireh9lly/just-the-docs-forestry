@@ -9,7 +9,7 @@ permalink: "/"
 ---
 # Welcome to VNKit!
 
-VNKit is a plugin that allows you to build a visual novel in Unity by linking together Nodes. It's designed to be easy for beginners to use, but also packs a lot of advanced features to allow you to add developed and interesting gameplay features to your visual novel.
+VNKit is a plugin that allows you to build a visual novel in Unity by linking Nodes together. It's designed to be easy for beginners to use, but also packs a lot of advanced features to allow you to add developed and interesting gameplay features to your visual novel.
 
 ### What's a Visual Novel?
 
