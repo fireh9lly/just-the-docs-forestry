@@ -21,14 +21,14 @@ nav_order: 2
 
 #### Putting VNKit into your game
 
-1. You will be taken to a new Scene. Create a Canvas inside of your scene. To do this, click the GameObject menu, then find UI>Canvas.
+1. You will be taken to a new Scene. Create a Canvas inside of your Scene. To do this, click the GameObject menu, then find UI>Canvas.
 2. Click on the Canvas object in the Hierarchy, and then look in the Inspector. Check:
    * the Render Mode is set to "Screen Space - Overlay",
    * the Canvas Scaler UI Scale Mode is set to "Scale With Screen Size",
-   * the Canvas Scaler Reference Resolution is set to whatever you set your VNKit virtual screen size to in the previous step,
    * the Screen Match mode is set to Expand.
-3. Right click on the Canvas that you have just created in the Hierarchy. Select 'Create Empty' from the menu that appears. (_Optional - you may want to rename the Empty to something appropriate, like 'VNKit'.)_
-4. While the Empty you have just created is selected, look for the Add Component button in the Inspector window. Click this, and add a StoryFrame. (_You can find this more easily by typing 'story' in the Search box above the component selection window._)
-5. You will now need to set the **size** of your VNKit virtual screen. In the RectTransform section on the top half of the Inspector window, put appropriate dimensions for the VNKit virtual screen into the Width and Height boxes. (_Note that this is different to the actual size of your game when on devices - it's a reference size used internally. Your game will display correctly on bigger or smaller screens._) **If you're not sure what to use here, put 1920x1080.**
-6. Save the Scene.
-7. Click the StoryFrame in the Heirachy. In the Inspector, you can now click "Open Story Editor". This will open a new window containing everything you need to build a visual novel with VNKit!
+3. You will now need to give Unity a frame of reference for the size of VNKit. In the Inspector, change the Canvas Scaler Reference Resolution to an appropriate size and aspect ratio for a virtual screen. _(Note that this is different to the actual, physical resolution of your game when on devices - it's a reference size used internally. Your game will display correctly on bigger or smaller screens.)_ **If you're not sure what to use here, set it to W 1920 H 1080.**
+4. Right click on the Canvas that you have just created in the Hierarchy. Select 'Create Empty' from the menu that appears. (_Optional - you may want to rename the Empty to something appropriate, like 'VNKit'.)_
+5. While the Empty you have just created is selected, look for the Add Component button in the Inspector window. Click this, and add a **StoryFrame**. (_You can find this more easily by typing 'story' in the Search box above the component selection window._)
+6. You will now link up the size of the canvas with your StoryFrame. In the RectTransform section on the top half of the Inspector window, set the StoryFrame's Width and Height to **the same dimensions that you used for the Canvas Scaler Reference Resolution** (e.g. 1920x1080). Now VNKit will be the same size as the game screen, and scale correctly for large or small screens.
+7. Save the Scene.
+8. Click the StoryFrame in the Heirachy. In the Inspector, you can now click "Open Story Editor". This will open a new window containing everything you need to build a visual novel with VNKit!
