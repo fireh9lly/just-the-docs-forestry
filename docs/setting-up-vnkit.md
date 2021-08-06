@@ -11,7 +11,7 @@ nav_order: 2
 >
 > This page describes something that _will be heavily revised in later versions_. The release version of the software will not be this annoying. Please use this as reference for the Alpha version in the meantime.
 
-#### Getting your Unity project up and running
+### Part 1 - Getting your Unity project up and running
 
 1. Download and install the [Unity Hub](https://unity3d.com/get-unity/download).
 2. Open the hub and install a version of Unity; the current recommended version is **Unity 2020**.
@@ -19,7 +19,7 @@ nav_order: 2
 4. You will have to wait for Unity to create the project, which will take _some time_ (about 2-5 minutes). Take the opportunity to grab a cup of tea, if you like.
 5. Download the VNKit package, and extract it to a new folder using whichever software you prefer (e.g. Microsoft's inbuilt Compressed File tool, PeaZip, 7Zip, etc). Once extracted, copy the `studio.axile.vnkit` folder into the Packages folder of your new project. Don't forget - you can quickly open a window for it by selecting your project in the Unity Hub list, then choosing 'Show in Explorer' (Windows)/ 'Reveal in Finder' (Mac).
 
-#### Putting VNKit into your game
+### Part 2 - Putting VNKit into your game
 
 1. You will be taken to a new Scene. Create a Canvas inside of your Scene. To do this, click the GameObject menu, then find UI>Canvas.
 2. Click on the Canvas object in the Hierarchy, and then look in the Inspector. Check:
