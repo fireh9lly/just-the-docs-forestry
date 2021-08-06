@@ -17,6 +17,8 @@ Once you click "Open Story Editor", you will be in VNKit's Story Editor. The bul
 >
 > Auto-save is triggered when you finish making a change in the editor and then click 'away' from that change. _(ALPHA ALERT – In some rare cases VNKit might not autosave correctly, possibly when you close the window or change tabs; this should never lose more than one small change, but if you do find this happening please report it as a bug)_
 >
+> Please remember to back up your project files regularly!
+>
 > ### Press X to JSON
 >
 > Your Story Editor will **automatically load** your project from `Story.json` when you open it from the Unity Inspector window. Doing this also refreshes the Story Editor. If you have made changes to your VNKit project files externally (such as updating the `studio.axile.vnkit` package folder, or editing `Story.json` in a text editor), you will need to close down and reopen the Story Editor to get VNKit to  notice. _(ALPHA ALERT_ – _closing and reopening the editor should be your first instinct if you find a display bug or similar problem. Tell us about what you found, though!)_
