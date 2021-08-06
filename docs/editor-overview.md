@@ -13,7 +13,7 @@ Once you click "Open Story Editor", you will be in VNKit's Story Editor. The bul
 >
 > ### An important note about saving your story
 >
-> The changes you make in the Story Editor are **auto-saved** in {VNKit path goes here}, as `Story.json` (and others). Saving your overall Unity project doesn't do anything to save your Story Editor content, so **don't worry about saving the Unity project regularly** unless you are also making changes within the main Unity editor.
+> The changes you make in the Story Editor are **auto-saved** in `Assets/Resources/VNKit`, as `Story.json` (and others). Saving your overall Unity project doesn't do anything to save your Story Editor content, so **don't worry about saving the Unity project regularly** unless you are also making changes within the main Unity editor.
 >
 > Auto-save is triggered when you finish making a change in the editor and then click 'away' from that change. VNKit can't see clicks that close the window or change tabs, so if you are losing work you just did, make sure to click somewhere else within the editor window before you close the Editor.
 >
