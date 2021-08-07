@@ -41,4 +41,8 @@ nav_order: 2
      
    ![](/assets/images/menu3.png)
 5. Save the Scene.
-6. Click the StoryFrame in the Heirachy. In the Inspector, you can now click "Open Story Editor". This will open a new window containing everything you need to build a visual novel with VNKit!
+6. Click the StoryFrame in the Heirachy. In the Inspector, you can now click "Open Story Editor". 
+
+     
+   ![](/assets/images/storyframe.png)  
+   This will open a new window containing everything you need to build a visual novel with VNKit!
