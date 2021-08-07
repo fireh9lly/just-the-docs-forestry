@@ -32,9 +32,9 @@ nav_order: 2
    You will now need to give Unity a frame of reference for the size of VNKit. In the Inspector, change the Canvas Scaler Reference Resolution to an appropriate size and aspect ratio for a virtual screen. _(Note that this is different to the actual, physical resolution of your game when on devices - it's a reference size used internally. Your game will display correctly on bigger or smaller screens.)_ **If you're not sure what to use here, set it to W 1920 H 1080.**
 
    ![](/assets/images/menu4.png)
-3. Right click on the Canvas that you have just created in the Hierarchy. Select 'Create Empty' from the menu that appears. (_Optional - you may want to rename the Empty to something appropriate, like 'VNKit'.)  
+3. Right click on the Canvas that you have just created in the Hierarchy. Select 'Create Empty' from the menu that appears. (_Optional - you may want to rename the Empty to something appropriate, like 'VNKit'._)  
      
-   ![](/assets/images/menu2.png)_
+   ![](/assets/images/menu2.png)
 4. While the Empty you have just created is selected, look for the Add Component button in the Inspector window. Click this, and add a **StoryFrame**. (_You can find this more easily by typing 'story' in the Search box above the component selection window._)  
      
    You will now link up your StoryFrame to the size of the canvas. In the RectTransform section on the top half of the Inspector window, set the StoryFrame's Width and Height to **the same dimensions that you used for the Canvas Scaler Reference Resolution** (e.g. 1920x1080). Now VNKit will be the same size as the game screen, and scale correctly for large or small screens.  
