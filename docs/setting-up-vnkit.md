@@ -41,7 +41,7 @@ nav_order: 2
      
    ![](/assets/images/menu3.png)
 5. Save the Scene.
-6. Click the StoryFrame in the Heirachy. In the Inspector, you can now click "Open Story Editor". 
+6. Click the StoryFrame in the Heirarchy. In the Inspector, you can now click "Open Story Editor". 
 
      
    ![](/assets/images/storyframe.png)  
