@@ -31,6 +31,7 @@ nav_order: 2
 
    You will now need to give Unity a frame of reference for the size of VNKit. 
    * In the Inspector, change the Canvas Scaler Reference Resolution to an appropriate size and aspect ratio for a virtual screen. _(Note that this is different to the actual, physical resolution of your game when on devices - it's a reference size used internally. Your game will display correctly on bigger or smaller screens.)_ **If you're not sure what to use here, set it to W 1920 H 1080.**
+   
     ![](/assets/images/menu4.png)
 3. Right click on the Canvas that you have just created in the Hierarchy. Select 'Create Empty' from the menu that appears. (_Optional - you may want to rename the Empty to something appropriate, like 'VNKit'._)
 
