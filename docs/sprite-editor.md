@@ -2,7 +2,7 @@
 layout: default
 has_children: false
 title: Sprite editor
-nav_order: 4
+nav_order: 40
 
 ---
 # Sprite Editor
