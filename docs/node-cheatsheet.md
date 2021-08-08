@@ -2,7 +2,7 @@
 layout: default
 has_children: false
 title: Node Overview
-nav_order: 98
+nav_order: 30
 
 ---
 # Node Cheatsheet
