@@ -23,15 +23,28 @@ Once you click "Open Story Editor", you will be in VNKit's Story Editor. The bul
 >
 > Your Story Editor will **automatically load** your project from `Story.json` when you open it from the Unity Inspector window. Doing this also refreshes the Story Editor. If you have made changes to your VNKit project files externally (such as updating the `studio.axile.vnkit` package folder, or editing `Story.json` in a text editor), you will need to close down and reopen the Story Editor to get VNKit to notice. _(ALPHA ALERT_ – _closing and reopening the editor should be your first instinct if you find a display bug or similar problem. Tell us about what you found, though!)_
 
-  
 ![](/assets/images/editor-overview.png)
 
 The first thing you will see is the Boards screen. This screen is where you will write, arrange and link the text, images and gameplay of your visual novel.
 
 #### 1. Board list
 
-Allows you to create and manage _Boards_. You can think of Boards as a single surface on which your Nodes are laid out - like a drawing board of index cards, or a whiteboard with a flowchart diagram. You can add a new Board to represent a new part of the story, a new location for the player to visit, a storylet to shuffle into the game, or for any reason that makes sense to you.  
-  
-The drop-down menu allows you to filter Boards based on Tags. Clicking `+ Add board` will create a new board.  
-  
-The Start Board is the board your story will begin on. The Start Board's title is displayed with an asterisk * next to it. The board with its title in **_bold italic_** is the board you are currently editing.
+Allows you to create and manage _Boards_. You can think of Boards as a single surface on which your Nodes are laid out - like a drawing board of index cards, or a whiteboard with a flowchart diagram. You can add a new Board to represent a new part of the story, a new location for the player to visit, a storylet to shuffle into the game, or for any reason that makes sense to you.
+
+The drop-down menu allows you to filter Boards based on Tags. 
+
+Clicking `+ Add board` will create a new board.
+
+The Start Board is the board your story will begin on. The Start Board's title is displayed with an asterisk * next to it. 
+
+The board with its title in **_bold italic_** is the board you are currently editing.
+
+2\. Reset View
+
+The board viewer window can be manipulated by dragging around on the back, and by using the mouse wheel to zoom. If you have panned too far away from your story, clicking here will return you to the central coordinate. 
+
+3\. Board manager
+
+From this menu, you can name the board, change its behaviour, edit and delete it.
+
+The Storylet box allows the board to be summoned with the `Jump to storylet` action in the Action editor. It also allows you to set Conditions for the board; the Jump to storylet action will select from any storylets which have true conditions.
