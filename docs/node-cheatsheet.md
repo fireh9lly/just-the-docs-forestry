@@ -105,16 +105,16 @@ In a branch, VNKit decides which Node to go to by checking the conditions of the
 
 Also, check you are using the right expressions:
 
-* Check that you are putting the inequality in front of the equals sign for _greater than and equal to_ and _less than and equal to_ checks - PlayerCash>=300, not PlayerCash=>300.
-* Have you accounted for all possible conditions? 
-  * If you have set up a two-pathed branch for `DatedMiguel > 3` and `DatedMiguel < 3`, what happens if the player has dated him exactly 3 times? 
-  * A variable that is being subtracted from can go into negative numbers. If the value represents an amount that shouldn't go lower than 0 - e.g. `playerGoldPieces`, `numberOfBugs` - this can cause unexpected behaviour. For numbers like this, it's best to use `max(ArrowsInQuiver -3, 0)` instead of `ArrowsInQuiver -3`.
+* Check that you are putting the inequality in front of the equals sign for _greater than and equal to_ and _less than and equal to_ checks - `PlayerCash>=300`, not `PlayerCash=>300`
+* Have you accounted for all possible conditions?
+  * If you have set up a two-pathed branch for `DatedMiguel > 3` and `DatedMiguel < 3`, what happens if the player has dated him exactly 3 times? Use _greater than or equal to_ `>=` or _less than or equal to_ `<=` to avoid problems like this.
+  * A variable that is being subtracted from can go into negative numbers. If the value represents an amount that doesn't make sense for it to go lower than 0 - e.g. `playerGoldPieces`, `numberOfGummyWorms` - this can cause unexpected behaviour. For numbers like this, it's best to use `max(ArrowsInQuiver -1, 0)` instead of `ArrowsInQuiver -1`.
 * Be careful using conditions to check for `Boolean=false`. When a Boolean variable cannot be found by VNKit, it defaults to _null_, not to false. Since you will usually be setting a story flag to True at the same time as you create it, it is usually better practice to check that a story flag has not been set by checking for `not Boolean`, which accepts both `Boolean=false` and `Boolean=null`.
 
 ### "I have a complex project with backstage processes that isn't working as it should."
 
-A good starting point is to add the Debug message action to every node that is potentially suspect. The Debug message action will push a message to Unity's console every time the node is active, which will make it easier to see if something is going wrong. If you are debugging a loop process, make sure the Collapse button is not selected, so you can see the Debug messages appear in the order your project creates them.
+A good starting point is to add the Debug message Action to every node that is potentially suspect. The Debug message Action will push a message to Unity's console every time the node is active, which will make it easier to see if something is going wrong. If you are debugging a loop process, make sure the Collapse button is not selected, so you can see the Debug messages appear in the order your project creates them.
 
 ### "My project where I have chained over a hundred empty Conditional hubs together seems to freeze for a couple of seconds."
 
-Each node takes one frame to run, so an extremely complex hub/selector structure may end up creating a tiny delay. In a situation where you were checking 60 conditionals in successive empty nodes, this delay could last 1 second. We think this is unlikely to cause any problems for most developers using VNKit as intended, but if it is giving you issues, please contact us. However, if you're reaching this limitation a lot, it is more likely that you are trying to do something that VNKit simply isn't very good at doing, and you would have better performance using a conventional scripting language.
+Each node takes one frame to run, so an extremely complex hub/selector structure may end up creating a tiny delay. In a situation where you were checking 60 conditionals in successive empty nodes, this delay could last 1 second. We think this is unlikely to cause any problems for most developers using VNKit as intended, but if you're reaching this limitation a lot, you are probably doing something experimental with VNKit that it was not designed to do. (And you probably know it.)
