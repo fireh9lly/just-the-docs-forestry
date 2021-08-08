@@ -2,7 +2,7 @@
 layout: default
 has_children: false
 title: Editor overview
-nav_order: 3
+nav_order: 20
 
 ---
 # Editor overview
