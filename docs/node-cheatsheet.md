@@ -61,7 +61,7 @@ If the Node has choices on it, the game will wait for the player to choose one b
 
 If the Node has no choices but is displaying a textbox on the screen, the game will wait for the player to click on the textbox or the game background in order to continue.
 
-If neither of these are the case, the game will wait for any sprite movements or fades to complete, then move automatically to the next Node. This can be overridden by using the _Wait_ action, which forces the player to wait a specified length of time (in seconds) to see the next Node. This is useful if you want to show the player an entire sprite frame animation before continuining.
+If neither of these are the case, the game will wait for any sprite movements or fades to complete, then move automatically to the next Node. This can be overridden by using the _Wait_ action, which forces the player to wait a specified length of time (in seconds) to see the next Node. This is useful if you want to show the player an entire sprite frame animation before continuing.
 
 ## The Action Editor
 
