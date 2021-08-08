@@ -2,7 +2,7 @@
 layout: default
 has_children: false
 title: Setting up VNKit
-nav_order: 2
+nav_order: 10
 
 ---
 # Setting up VNKit
