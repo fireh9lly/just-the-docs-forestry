@@ -1,7 +1,7 @@
 ---
 layout: default
 has_children: false
-title: Editor overview
+title: Editor overview - the Boards screen
 nav_order: 20
 
 ---
@@ -27,9 +27,15 @@ Once you click "Open Story Editor", you will be in VNKit's Story Editor. The bul
 
 The first thing you will see is the Boards screen. This screen is where you will write, arrange and link the text, images and gameplay of your visual novel.
 
+Most of your time in VNKit will be spent on this screen. When you're ready to set up sprites, events, generators and general project settings, you can navigate to other parts of VNKit using the tabs along the top.
+
+> #### A handy tip - 
+>
+> On the top right of the screen, by the maximise/close buttons, there's an ellipsis menu. From here, you can add a second tab to the Story Editor window. We recommend adding a Game tab so you can preview your game within the Story Editor. There aren't on-screen play controls, so use Ctrl+P/Cmd+P to play and stop the preview.
+
 #### 1. Board list
 
-Allows you to create and manage _Boards_. You can think of a Board as a flat surface on which your Nodes are laid out - like a drawing board with index cards pinned to it, or a whiteboard with a flowchart diagram. You can add a new Board to represent a new part of the story, a new location for the player to visit, a storylet to shuffle into the game, or for any reason that makes sense to you. 
+Allows you to create and manage _Boards_. You can think of a Board as a flat surface on which your Nodes are laid out - like a drawing board with index cards pinned to it, or a whiteboard with a flowchart diagram. You can add a new Board to represent a new part of the story, a new location for the player to visit, a storylet to shuffle into the game, or for any reason that makes sense to you.
 
 The Board itself is displayed in the large window in the middle.
 
