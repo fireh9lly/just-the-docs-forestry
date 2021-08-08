@@ -13,12 +13,25 @@ Once you click "Open Story Editor", you will be in VNKit's Story Editor. The bul
 >
 > ### An important note about saving your story
 >
-> The changes you make in the Story Editor are **auto-saved** in `Assets/Resources/VNKit`, as `Story.json` (and others). Saving your overall Unity project doesn't do anything to save your Story Editor content, so **don't worry about saving the Unity project regularly** unless you are also making changes within the main Unity editor.
+> The changes you make in the Story Editor are **auto-saved** in `Assets/Resources/VNKit` as `Story.json` (and others). Saving your overall Unity project doesn't do anything to save your Story Editor content, so **don't worry about saving the Unity project regularly** unless you are also making changes within the main Unity editor.
 >
-> Auto-save is triggered when you finish making a change in the editor and then click 'away' from that change. _(ALPHA ALERT – In some rare cases VNKit might not autosave correctly, possibly when you close the window or change tabs; this should never lose more than one small change, but if you do find this happening please report it as a bug)_
+> Auto-save is triggered when you finish making a change in the editor and then click 'away' from that change. _(ALPHA ALERT – In some rare cases VNKit might not autosave correctly, possibly when you close the window or change tabs; this should never lose more than one small change, but if you do find this happening please report it as a bug.)_
 >
-> Please remember to back up your project files regularly!
+> 👉 Please remember to back up your project files regularly! 👈
 >
 > ### Press X to JSON
 >
-> Your Story Editor will **automatically load** your project from `Story.json` when you open it from the Unity Inspector window. Doing this also refreshes the Story Editor. If you have made changes to your VNKit project files externally (such as updating the `studio.axile.vnkit` package folder, or editing `Story.json` in a text editor), you will need to close down and reopen the Story Editor to get VNKit to  notice. _(ALPHA ALERT_ – _closing and reopening the editor should be your first instinct if you find a display bug or similar problem. Tell us about what you found, though!)_
+> Your Story Editor will **automatically load** your project from `Story.json` when you open it from the Unity Inspector window. Doing this also refreshes the Story Editor. If you have made changes to your VNKit project files externally (such as updating the `studio.axile.vnkit` package folder, or editing `Story.json` in a text editor), you will need to close down and reopen the Story Editor to get VNKit to notice. _(ALPHA ALERT_ – _closing and reopening the editor should be your first instinct if you find a display bug or similar problem. Tell us about what you found, though!)_
+
+  
+![](/assets/images/editor-overview.png)
+
+The first thing you will see is the Boards screen. This screen is where you will write, arrange and link the text, images and gameplay of your visual novel.
+
+#### 1. Board list
+
+Allows you to create and manage _Boards_. You can think of Boards as a single surface on which your Nodes are laid out - like a drawing board of index cards, or a whiteboard with a flowchart diagram. You can add a new Board to represent a new part of the story, a new location for the player to visit, a storylet to shuffle into the game, or for any reason that makes sense to you.  
+  
+The drop-down menu allows you to filter Boards based on Tags. Clicking `+ Add board` will create a new board.  
+  
+The Start Board is the board your story will begin on. The Start Board's title is displayed with an asterisk * next to it. The board with its title in **_bold italic_** is the board you are currently editing.
