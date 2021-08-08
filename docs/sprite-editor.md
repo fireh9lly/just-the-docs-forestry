@@ -2,8 +2,7 @@
 layout: default
 has_children: false
 title: Sprite editor
-nav_order: 
-published: false
+nav_order: 4
 
 ---
 # Sprite Editor
@@ -21,9 +20,19 @@ Below the offset you can see a list of the **states** (animations) belonging to 
 When a sprite is selected, the right panel will show the basic information belonging to the sprite:
 
 * The sprite's **Name** can be changed here.
-* A default **Scale** can be defined; this can be useful if your images are bigger than the size of the (virutal) game window, and need to be shrunk down. 
-* An audio **Blip** can be set here, which will play when the game is displaying a line of this character's dialogue (if the _text transition mode_ is set to "Typing"; see the **Config Zone** section). 
+* A default **Scale** can be defined; this can be useful if your images are bigger than the size of the (virutal) game window, and need to be shrunk down.
+* An audio **Blip** can be set here, which will play when the game is displaying a line of this character's dialogue (if the _text transition mode_ is set to "Typing"; see the **Config Zone** section).
 * A **Notes** section is provided for general annotations, reminders and developer commentary relating to the character; this will not be visible in-game.
-* Underneath the Notes section is a list of **layers**. Layers can be added, removed and reordered here. Layers appearing higher in this list will be displayed on top of lower layers when the game is running. It's not possible to reorder layers at runtime. 
+* Underneath the Notes section is a list of **layers**. Layers can be added, removed and reordered here. Layers appearing higher in this list will be displayed on top of lower layers when the game is running. It's not possible to reorder layers at runtime.
 * The **Delete sprite** button will show a confirmation window before deleting the sprite from the game data.
 * The **Appearances** section shows a list of boards on which this sprite appears, which can be useful for debugging and analysis.
+
+When a state is selected in the centre panel, the content on the right-hand side changes:
+
+![](/assets/images/state-view.png)
+
+Next to the info panel there will be a list of the _frames_ in the state's animation cycle. The infobox on the right shows the name of the state, and also its **Quicksets**. These are "collections" of states that can be used to easily switch out multiple parts of complicated sprites; for example, if a character has several outfits that consist of a top, bottoms, shoes, and optional accessories, each of these outfits could be assigned its own quickset, and **Set Sprite State** actions used to pick between them in-game.
+
+If a frame is selected, the frame number will be shown here, and the **Move up** and **Move down** buttons can be used to reorder the frames.
+
+The **Time** field is used to control the speed of the animation, by setting the duration of each frame in seconds.
