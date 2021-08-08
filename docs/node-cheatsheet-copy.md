@@ -10,7 +10,7 @@ published: false
 
 When you click the **Add action** button on a Node, a list of available actions will open. You can collapse different categories within the Action list using the arrows to the top right of each category. The Action list will remember which categories you have collapsed while you are working on your current project.
 
-The following is a quick reference for available actions. For more detailed information, see **The Action Editor - Overview.** (Not done yet! -Ed.)
+The following is a quick reference for available actions. For more detailed information, see **The Action Editor - Overview.** _(Not done yet! -Ed.)_
 
 ### Variables and events
 
@@ -29,6 +29,12 @@ The variable _name_ can be one of three things:
 * An _object accessor_. This should be the name of an object variable followed by a dot, and then the name of one of the object's attributes, like this:  
   `objectVariable.attribute`  
   If the variable does not contain an object, the system will raise an error.
+
+> ### Wait, what?
+>
+> * _Global variables_ are variables that apply to 'the game' - a more poetic way of thinking about them is that global variables apply to the 'it' used in the phrase 'it's raining'. They're useful for tracking most game variables, like story flags and player stats, and might be the only variable type necessary for a visual novel that does not use complex game mechanics.
+> * An _array accessor_ represents a position in a numbered list. If you have to remember data that is stored in _a specific order_ (e.g. items in the player's inventory), you can use an array accessor to store it in an array, at the list position you want (e.g.  `Name: inventory[3]/ Value: Milk` would mean "put Milk in Inventory Slot 3").
+> * An _object accessor_ lets you change part of an _object_ - a bundle of different attributes referred to by name. This is a useful way of organising variables - e.g. `Name: playerchar.stress/ Value: 50` makes it clear that the variable is to do with the player character.
 
 #### Set profile variable
 
