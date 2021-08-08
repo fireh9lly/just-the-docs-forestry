@@ -3,7 +3,6 @@ layout: default
 has_children: false
 title: The Action Editor - Action List
 nav_order: 98
-published: false
 
 ---
 # The Action Editor
@@ -226,7 +225,7 @@ Flips a sprite horizontally (set "flipped" to true), or unflips ("flipped" to fa
 
 #### Move sprite
 
-Move a sprite somewhere on the screen. The position can be given in "abosolute" or "relative" coordinates; absolute coordinates correspond to pixel values, and in the relative coordinate system positions are given proportionally to the size of the screen (from -1.0 to +1.0 vertically and horizontally). You can also specify a time for the transition to take, or leave it at 0 to move the sprite instantly.
+Move a sprite somewhere on the screen. The position can be given in "absolute" or "relative" coordinates; absolute coordinates correspond to pixel values, and in the relative coordinate system positions are given proportionally to the size of the screen (from -1.0 to +1.0 vertically and horizontally). You can also specify a time for the transition to take, or leave it at 0 to move the sprite instantly.
 
 #### Scale sprite
 
@@ -331,53 +330,3 @@ Resume a paused backstage process from the node where it was initially paused.
 #### Stop backstage process
 
 Stops a backstage process. If you need to run it again, you will need to create another Start backstage process action.
-
-## Markup
-
-Inside a node's text, you can use a simple form of markup to control formatting. This uses a syntax based on [Markdown](https://daringfireball.net/projects/markdown/):
-
-* **Italics:** Use `*asterisks*`.
-* **Bold text:** Use `**double asterisks**`.
-* **Bold italics:** Use `***triple asterisks***`.
-* **Underlining:** Use `__double underscores__`.
-* **Links:** \[This is a link:StartOfBoard\] will create a link to the node with the name `StartOfBoard`, highlighted in blue; when the user clicks the link, the story will jump to the node. In NVL mode, links will deactivate when clicked on, after which they will look the same as ordinary text. Links are therefore useful for making hypertext interactive fiction. Note: Links only allow you to link elsewhere in the game: they do not allow you to link to external websites.
-
-If you want to use asterisks and underscores in text without accidentally turning them into markup, you can mark them with a backslash like this: `\*`. If you want to use a backslash without it affecting how the game understands markup, type a double backslash: `\\`.
-
-You can also add _rests_ to control the speed at which text is displayed (when using the **Typing** text mode). A rest causes the text to pause briefly as it's being shown to the player. You can control the length of the pause (in seconds) by setting the **Rest time** property on the Story Frame.
-
-A rest is marked with a hash character: #. For longer rests, you can use any number of hashes together: ###.
-
-`"I think...### I will be going now."`
-
-You can also use variables in text. To use a variable, write a dollar sign ($) followed by the variable's name.
-
-`"Ah, so your name is $playerName?"`
-
-This works for strings, numbers, booleans (represented as "true" and "false"), arrays (which are written out in square brackets), and even objects (displayed with their values in braces). Stored expressions can also be substituted into text, though will probably look strange.
-
-You can substitute more complex expressions by using the `$` operator and placing the expression in brackets:
-
-`"You found $coinsCollected doubloons already! If you find one more, you'll have $(coinsCollected+1)!"`
-
-## Things to watch out for
-
-### "My conditional branches aren't going in the direction I expect!"
-
-Are your branches in the correct order?
-
-In a branch, VNKit decides which Node to go to by checking the conditions of the Nodes it is connected to from top to bottom, in order. In branches, make sure any Nodes with an empty conditions box are connected _underneath_ Nodes with conditionals. Otherwise, story flow will progress through the Node without conditionals, and the other conditions will not be checked.
-
-Also, check you are using the right expressions:
-
-* Check that you are putting the inequality in front of the equals sign for _greater than and equal to_ and _less than and equal to_ checks - PlayerCash>=300, not PlayerCash=>300.
-* Have you accounted for all possible conditions? If you have set up a two-pathed branch for `DatedMiguel > 3` and `DatedMiguel < 3`, what happens if the player has dated him exactly 3 times? A variable that is being subtracted from can go into negative numbers, which can cause unexpected behaviour if the value represents an amount that should stop counting down at 0 - e.g. remaining_apples or playerGoldPieces. Think through the mathematical logic of your branches carefully!
-* Be careful using conditions to check for Boolean=false. When a Boolean variable cannot be found by VNKit, it defaults to _null_, not to false. Since you will usually be setting a story flag to True at the same time as you create it, it is usually better practice to check that a story flag has not been set by checking for "not Boolean", which accepts both Boolean=false and Boolean=null.
-
-### "I have a complex project with backstage processes that isn't working as it should."
-
-A good starting point is to add the Debug message action to every node that is potentially suspect. The Debug message action will push a message to Unity's console every time the node is active, which will make it easier to see if something is going wrong. If you are debugging a loop process, make sure the Collapse button is not selected, so you can see the Debug messages appear in the order your project creates them.
-
-### "My project where I have chained over a hundred empty Conditional hubs together seems to freeze for a couple of seconds."
-
-Each node takes one frame to run, so an extremely complex hub/selector structure may end up creating a tiny delay. In a situation where you were checking 60 conditionals in successive empty nodes, this delay could last 1 second. We think this is unlikely to cause any problems for most developers using VNKit as intended, but if it is giving you issues, please contact us. However, if you're reaching this limitation a lot, it is more likely that you are trying to do something that VNKit simply isn't very good at doing, and you would have better performance using a conventional scripting language.
