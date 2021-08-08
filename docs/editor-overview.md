@@ -31,20 +31,22 @@ The first thing you will see is the Boards screen. This screen is where you will
 
 Allows you to create and manage _Boards_. You can think of Boards as a single surface on which your Nodes are laid out - like a drawing board of index cards, or a whiteboard with a flowchart diagram. You can add a new Board to represent a new part of the story, a new location for the player to visit, a storylet to shuffle into the game, or for any reason that makes sense to you.
 
-The drop-down menu allows you to filter Boards based on Tags. 
+The drop-down menu allows you to filter Boards based on Tags.
 
 Clicking `+ Add board` will create a new board.
 
-The Start Board is the board your story will begin on. The Start Board's title is displayed with an asterisk * next to it. 
+The Start Board is the board from which your game will begin running. The Start Board's title is displayed with an asterisk * next to it.
 
 The board with its title in **_bold italic_** is the board you are currently editing.
 
-2\. Reset View
+#### 2. Reset View
 
-The board viewer window can be manipulated by dragging around on the back, and by using the mouse wheel to zoom. If you have panned too far away from your story, clicking here will return you to the central coordinate. 
+You can view other parts of the board by dragging around on the backing, and by using the mouse wheel to zoom. The board goes on forever, so if you have panned too far away from your story, clicking here will return you to the central coordinate.
 
-3\. Board manager
+#### 3. Board manager
 
-From this menu, you can name the board, change its behaviour, edit and delete it.
+From this menu, you can name the board, change its behaviour and tags, edit and delete it.
 
-The Storylet box allows the board to be summoned with the `Jump to storylet` action in the Action editor. It also allows you to set Conditions for the board; the Jump to storylet action will select from any storylets which have true conditions.
+The Storylet box allows the board to be summoned with the `Jump to storylet` action in the Action editor. Once checked, you will also be able to set Conditions for the board. When you use the `Jump to storylet` action, it will take you to a random storylet which fits the story's conditions. 
+
+Tags let you label boards, and you can use them as a filter in the dropdown menu in the Board list. If a board is a Storylet, you can also jump to it based on its tags. See Storylets for more information. (_not done yet - Ed_)
