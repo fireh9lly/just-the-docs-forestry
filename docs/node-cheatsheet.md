@@ -1,7 +1,7 @@
 ---
 layout: default
 has_children: false
-title: Node Overview
+title: Node overview
 nav_order: 30
 
 ---
