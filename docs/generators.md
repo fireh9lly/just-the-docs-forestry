@@ -16,4 +16,4 @@ The generator editor is used for creating _generators_, which can be used for dr
 * **StringTable:** This is a list of string values that can be generated randomly (_Random_ mode), in an ordered sequence (_Sequential_) or in a shuffled sequence (_Shuffle_). You could use this to easily set up a character who barks a few random lines, without creating a complex network of nodes or variables to track which lines they've said recently.
 * **NumberTable:** This is a list of numbers that can be generated in _Random_, _Shuffle_ or _Sequential_ mode, in the same way as a StringTable.
 
-To use a generator in-game, call the `generate()` function with the name of the generator; see the [Expression reference](/docs/expression-reference.html "Expression reference") for more details.
+To use a generator in-game, call the `generate()` function with the name of the generator; see the [Expression reference](/docs/expression-reference/ "Expression reference") for more details.
