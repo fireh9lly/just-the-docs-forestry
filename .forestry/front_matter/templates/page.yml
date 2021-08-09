@@ -35,6 +35,7 @@ fields:
   type: boolean
   label: has_toc
 pages:
+- docs/actions.md
 - docs/editor-overview.md
 - docs/expression-reference.md
 - docs/node-cheatsheet-copy.md
