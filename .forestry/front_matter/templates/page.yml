@@ -24,7 +24,6 @@ fields:
     required: false
   label: permalink
 pages:
-- docs/actions.md
 - docs/editor-overview.md
 - docs/expression-reference.md
 - docs/node-cheatsheet-copy.md
