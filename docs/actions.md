@@ -7,3 +7,4 @@ parent: ''
 has_toc: true
 
 ---
+{:toc}
