@@ -1,9 +1,0 @@
----
-layout: default
-has_children: true
-title: Actions
-nav_order: 1
-parent: ''
-has_toc: true
-
----
