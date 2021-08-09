@@ -37,6 +37,12 @@ The variable _name_ can be one of three things:
 > * An _array accessor_ represents a position in a numbered list. If you have to remember data that is stored in _a specific order_ (e.g. items in the player's inventory), you can use an array accessor to store it in an array, at the list position you want (e.g.  `Name: inventory[3]/ Value: Milk` would mean "put Milk in Inventory Slot 3").
 > * An _object accessor_ lets you change part of an _object_ - a bundle of different attributes referred to by name. This is a useful way of organising variables - e.g. `Name: playerchar.stress/ Value: 50` makes it clear that the variable is to do with the player character.
 
+Array and object accessors can be chained together, allowing you to access objects inside arrays, arrays inside objects, or any combination. For example:
+
+`player.abilities[3].name`
+
+refers to the `name` field of item number `3` (an object) in the `abilities` array inside the `player` object (which is a global variable).
+
 #### Set profile variable
 
 Set a variable for out-of-story information. Useful for unlocking CG Gallery items, saving options, or horror games where you want to reach through the fourth wall.
