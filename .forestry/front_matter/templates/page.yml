@@ -31,6 +31,7 @@ fields:
   showOnly:
     field: has_children
     value: false
+  default: "~"
 - name: has_toc
   type: boolean
   label: has_toc
