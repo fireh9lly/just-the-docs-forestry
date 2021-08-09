@@ -1,6 +1,6 @@
 ---
 layout: default
-has_children: false
+has_children: true
 title: Editor overview - the Boards screen
 nav_order: 20
 
