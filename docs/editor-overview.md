@@ -29,7 +29,7 @@ The first thing you will see is the Boards screen. This screen is where you will
 
 Most of your time in VNKit will be spent on this screen. When you're ready to set up sprites, events, generators and general project settings, you can navigate to other parts of VNKit using the tabs along the top.
 
-> #### A handy tip - 
+> #### A handy tip -
 >
 > On the top right of the screen, by the maximise/close buttons, there's an ellipsis menu. From here, you can add a second tab to the Story Editor window. We recommend adding a Game tab so you can preview your game within the Story Editor. There aren't on-screen play controls, so use Ctrl+P/Cmd+P to play and stop the preview.
 
@@ -66,7 +66,7 @@ Use this to keep notes for yourself about the project. You can use it to note do
 
 #### 5. Node
 
-Nodes are the building block of a VNKit game. They will store text the player will actually see, display images and music, remember and reference variables, and will follow after each other in the order they are linked together. For more about them, see Node overview. _(Need to do this)_
+Nodes are the building block of a VNKit game. They will store text the player will actually see, display images and music, remember and reference variables, and will follow after each other in the order they are linked together. For more about them, see [Node overview](/docs/node-cheatsheet/).
 
 #### 6 Statistics
 
