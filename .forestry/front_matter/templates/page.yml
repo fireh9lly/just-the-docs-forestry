@@ -27,10 +27,15 @@ fields:
   type: text
   config:
     required: false
-  label: Parent
+  label: parent
   showOnly:
     field: has_children
     value: false
+- name: has_toc
+  type: text
+  config:
+    required: false
+  label: has_toc
 pages:
 - docs/Actions/actions.md
 - docs/editor-overview.md
