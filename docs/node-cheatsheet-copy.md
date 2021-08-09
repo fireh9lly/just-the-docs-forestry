@@ -3,6 +3,7 @@ layout: default
 has_children: false
 title: The Action Editor - Action List
 nav_order: 98
+parent: Actions
 
 ---
 # The Action Editor
