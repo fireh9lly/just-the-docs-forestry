@@ -3,13 +3,15 @@ layout: default
 has_children: false
 title: Expression reference
 nav_order: 99
+parent: ''
+has_toc: false
 
 ---
 # Expression reference
 
 In VNKit, you use _expressions_ to write your game's variables and implement conditional branching. Most expressions are simple to understand and write, but they can be combined to allow for more complex effects.
 
-Expressions are used in the Set variable Action, in the Condition box on the Node editor, and in a few other places.
+Expressions are used in the Set variable Action, in the Condition box on the Node editor, and in a few other places. An important use of expressions is _expression substitution_: you can use expressions in dialogue, or create responsive UI objects that display game data, by using the `$` operator inside a block of text. See the **Node overview** for more on how to use expression substitution.
 
 ## Simple expressions
 
@@ -25,8 +27,8 @@ Expressions are built up out of _values_ and _operators_. Values come in seven b
 
   Arrays can contain any kind of data, including other arrays. You can think of an array as a numbered list, where the first entry in the list is numbered 0. To get an individual element stored in an array, use the name of the array followed by the index number, in square brackets, of the element you want.
 
-  `ingredients[0]` -> `"garlic"`\
-  `ingredients[1]` -> `"lemon juice"`\
+  `ingredients[0]` -> `"garlic"`  
+  `ingredients[1]` -> `"lemon juice"`  
   `ingredients[2]` -> `"oregano"`
 
   Arrays can be useful for storing player inventories, or lists of locations or clues.
@@ -36,8 +38,8 @@ Expressions are built up out of _values_ and _operators_. Values come in seven b
 
   Like arrays, objects can contain any kind of data. The contents of an object can be accessed using the **dot** operator, like this:
 
-  `book.title` -> `"Frankenstein; or, The Modern Prometheus"`\
-  `book.author` -> `"Mary Shelley"`\
+  `book.title` -> `"Frankenstein; or, The Modern Prometheus"`  
+  `book.author` -> `"Mary Shelley"`  
   `book.year` -> `1818`
 
   Objects have a variety of uses for storing and representing game data. Several of VNKit's built-in functions make use of objects.

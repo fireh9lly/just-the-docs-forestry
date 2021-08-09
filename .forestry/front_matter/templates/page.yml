@@ -31,14 +31,16 @@ fields:
   showOnly:
     field: has_children
     value: false
-  default: null
+  default: 
 - name: has_toc
   type: boolean
   label: has_toc
 pages:
 - docs/actions.md
+- docs/database.md
 - docs/editor-overview.md
 - docs/expression-reference.md
+- docs/generators.md
 - docs/node-cheatsheet-copy.md
 - docs/node-cheatsheet.md
 - docs/setting-up-vnkit.md

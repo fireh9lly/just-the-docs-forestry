@@ -1,8 +1,10 @@
 ---
 layout: default
 has_children: false
-title: Node Overview
+title: Node overview
 nav_order: 30
+parent: ''
+has_toc: false
 
 ---
 # Node Overview
