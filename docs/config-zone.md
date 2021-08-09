@@ -9,7 +9,9 @@ has_toc: false
 ---
 # Config Zone
 
-The Config Zone is the area of the editor where most of your game's settings are managed. (**Alpha alert** – this section will probably change a lot.)
+The Config Zone is the area of the editor where most of your game's settings are managed. 
+
+(**Alpha alert** **–** this section will probably change a lot.)
 
 Configurable here are:
 
