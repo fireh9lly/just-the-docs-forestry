@@ -1,11 +1,11 @@
 ---
 layout: default
 has_children: false
-title: Node overview
+title: Node Overview
 nav_order: 30
 
 ---
-# Node Cheatsheet
+# Node Overview
 
 ## Did you say 'Node'?
 
