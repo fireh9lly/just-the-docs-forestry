@@ -3,7 +3,7 @@ layout: default
 has_children: false
 title: Sprite editor
 nav_order: 40
-parent: "~"
+parent: ''
 has_toc: false
 
 ---
