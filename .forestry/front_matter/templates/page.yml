@@ -37,6 +37,7 @@ fields:
   label: has_toc
 pages:
 - docs/actions.md
+- docs/database.md
 - docs/editor-overview.md
 - docs/expression-reference.md
 - docs/generators.md
