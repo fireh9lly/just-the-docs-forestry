@@ -23,6 +23,14 @@ fields:
   config:
     required: false
   label: permalink
+- name: parent
+  type: text
+  config:
+    required: false
+  label: Parent
+  showOnly:
+    field: has_children
+    value: false
 pages:
 - docs/Actions/actions.md
 - docs/editor-overview.md
