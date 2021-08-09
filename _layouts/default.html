@@ -101,7 +101,7 @@ layout: table_wrappers
     </div>
     <div id="main-content-wrap" class="main-content-wrap">
       {% unless page.url == "/" %}
-        {% if page.parent and page.parent != '' %}
+        {% if page.parent %}
           {%- for node in pages_list -%}
             {%- if node.parent == nil -%}
               {%- if page.parent == node.title or page.grand_parent == node.title -%}
