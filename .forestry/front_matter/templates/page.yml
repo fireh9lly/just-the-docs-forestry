@@ -36,6 +36,7 @@ fields:
   type: boolean
   label: has_toc
 pages:
+- docs/a-walkthrough-setting-up-a-simple-game.md
 - docs/config-zone.md
 - docs/database.md
 - docs/editor-overview.md
