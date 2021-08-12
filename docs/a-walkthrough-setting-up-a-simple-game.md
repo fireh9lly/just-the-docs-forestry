@@ -18,7 +18,7 @@ The following is a guide for setting up a simple game in VNKit. It's aimed to he
 
 ## Step 1 - It starts from a single Node
 
-When you finish setting up VNKit and enter the Story Editor, you'll be faced with the Board Viewer screen with one Node already placed for you.
+When you finish setting up VNKit and enter the Story Editor, you'll be faced with the Board Viewer screen. One Node  is already placed for you.
 
 Begin by typing out the first textbox of your story. When you've done that, right click, click 'Add node'. Then type the second textbox of your story. Then drag from the circle connector on the right of the first Node to link it to the second Node!
 
