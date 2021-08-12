@@ -21,7 +21,7 @@ The centre panel shows the currently-selected _layer_ of the sprite. For simple 
 
 > ### Tips for working with layers
 >
-> Every frame belonging to a layer will **always be placed at the same coordinate,** but sometimes frames might be significantly different shapes and sizes. The easiest way to handle this is to make sure that each frame _image_ has the same dimensions as your entire base sprite, even if most of the image is therefore empty. There is no need to worry about file size, because a large area of transparent pixels will compress virtually to nothing when the PNG is saved.
+> Every frame belonging to a layer will **always be placed at the same coordinate**, but sometimes frames might be significantly different shapes and sizes. The easiest way to handle this is to make sure that each frame _image_ has the same dimensions as your entire base sprite, even if most of the image is therefore empty. There is no need to worry about file size, because a large area of transparent pixels will compress virtually to nothing when the PNG is saved.
 >
 > #### "My layers are a different size to the base image and positioning them is a pain!"
 >
