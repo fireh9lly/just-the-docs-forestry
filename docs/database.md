@@ -21,6 +21,6 @@ Below the field list is the **+ Add row** button, which adds a new row to the en
 
 At the bottom of the window is a list of the table's rows, in order. These can be edited here, or deleted using the **X** button.
 
-During the game, data can be retrieved from a data table using the `getData()`, `getDataRange()`, and `getDataRow()` functions; see the [expression reference](/docs/expression-reference/ "Expression reference") for more information on these. 
+During the game, data can be retrieved from a data table using the `getData()`, `getDataRange()`, and `getDataRow()` functions; see the [expression reference](/docs/expression-reference/ "Expression reference") for more information on these.
 
-Remember that data stored in the database is _immutable_: it can't be changed during the game. If you need modify something defined in a data table, the best way is to make a copy of the data by storing it in a variable; you will then be able to modify the variable like any other.
+Remember that data stored in the database is _immutable_: it can't be changed during the game. If you need to modify something defined in a data table, the best way is to make a copy of the data by storing it in a variable; you will then be able to modify the variable like any other.
