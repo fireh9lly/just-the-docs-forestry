@@ -1,6 +1,6 @@
 ---
 layout: default
-has_children: true
+has_children: false
 title: Storylets
 nav_order: 9
 parent: ''
