@@ -43,7 +43,6 @@ pages:
 - docs/expression-reference.md
 - docs/generators.md
 - docs/node-cheatsheet-copy.md
-- docs/node-cheatsheet.md
 - docs/setting-up-vnkit.md
 - docs/sprite-editor.md
 - docs/ui-editor.md
