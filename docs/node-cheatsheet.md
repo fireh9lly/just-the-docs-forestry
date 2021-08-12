@@ -31,7 +31,7 @@ _Output connectors_ come from the dots on the top right of the Node. Nodes can b
 
 **The order of the output connectors is important.** The game checks each connected Node **from top to bottom**, and the story will flow to **the first Node** it checks that has a fulfilled condition. (See **Node Behaviour**).
 
-The _Condition_ box can be used to control the flow of the story. Writing an _expression_ in this box will prevent the story from flowing to the Node unless the game has fulfilled the expression's requirements. See the **Expression Reference** for more on how to write expressions.
+The _Condition_ box can be used to control the flow of the story. Writing an _expression_ in this box will prevent the story from flowing to the Node unless the game has fulfilled the expression's requirements. See the [Expression Reference ](/docs/expression-reference/)for more on how to write expressions.
 
 For Nodes that represent a line of dialogue, the _Speaker_ box can be used to record the name of the speaking character. This will be displayed just above the textbox in ADV mode, or at the beginning of the line in NVL mode.
 
