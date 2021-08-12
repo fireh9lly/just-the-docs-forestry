@@ -36,7 +36,6 @@ fields:
   type: boolean
   label: has_toc
 pages:
-- docs/actions.md
 - docs/config-zone.md
 - docs/database.md
 - docs/editor-overview.md
