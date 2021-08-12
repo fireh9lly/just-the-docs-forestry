@@ -9,6 +9,19 @@ has_toc: false
 ---
 # Expression reference
 
+#### Table of Contents
+
+1. [Expressing yourself](https://vnkit.axile.studio/docs/expression-reference/#expressing-yourselfs)
+2. [Simple expressions](https://vnkit.axile.studio/docs/expression-reference/#simple-expressions)
+3. [Comparisons](https://vnkit.axile.studio/docs/expression-reference/#comparisons)
+4. [Negation](https://vnkit.axile.studio/docs/expression-reference/#negation)
+5. [Arithmetic](https://vnkit.axile.studio/docs/expression-reference/#arithmetic)
+6. [Dice](https://vnkit.axile.studio/docs/expression-reference/#dice)
+7. [Compound expressions](https://vnkit.axile.studio/docs/expression-reference/#compound-expressions)
+8. [Function list]()
+
+## Expressing yourself
+
 In VNKit, you use _expressions_ to write your game's variables and implement conditional branching. Most expressions are simple to understand and write, but they can be combined to allow for more complex effects.
 
 Expressions are used in the Set variable Action, in the Condition box on the Node editor, and in a few other places. An important use of expressions is _expression substitution_: you can use expressions in dialogue, or create responsive UI objects that display game data, by using the `$` operator inside a block of text. See the [Node overview](/docs/node-overview/) for more on how to use expression substitution.
