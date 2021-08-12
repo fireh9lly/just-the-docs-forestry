@@ -11,7 +11,7 @@ has_toc: false
 
 In VNKit, you use _expressions_ to write your game's variables and implement conditional branching. Most expressions are simple to understand and write, but they can be combined to allow for more complex effects.
 
-Expressions are used in the Set variable Action, in the Condition box on the Node editor, and in a few other places. An important use of expressions is _expression substitution_: you can use expressions in dialogue, or create responsive UI objects that display game data, by using the `$` operator inside a block of text. See the **Node overview** for more on how to use expression substitution.
+Expressions are used in the Set variable Action, in the Condition box on the Node editor, and in a few other places. An important use of expressions is _expression substitution_: you can use expressions in dialogue, or create responsive UI objects that display game data, by using the `$` operator inside a block of text. See the [Node overview](/docs/node-overview/) for more on how to use expression substitution.
 
 ## Simple expressions
 
