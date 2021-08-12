@@ -5,7 +5,6 @@ title: Walkthrough - setting up a simple game
 nav_order: 101
 parent: ''
 has_toc: false
-published: false
 
 ---
 # Walkthrough
@@ -30,8 +29,8 @@ Begin by typing out the first textbox of your story. When you've done that, righ
 
 Step 2 - Your first choice
 
-On the second node, press the `+ Add choice` button a few times until you have the number of choices you want.
+On the second node, press the `+ Add choice` button a few times until you have the number of Choices you want.
 
 ![](/assets/images/nodes2.gif)
 
-You'll need somewhere for all those choices to lead, so make a new Node for each of the choices to lead to.
+You'll need somewhere for all those Choices to lead, so make a new Node for each of the Choices to lead to. Once you've done that, link each one back to the node with the Choice on it. (Remember - you don't have to insert the new cable into the Node's connector. You can link by dragging the connector anywhere on the body of a node.)
