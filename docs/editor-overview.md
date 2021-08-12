@@ -33,7 +33,7 @@ Most of your time in VNKit will be spent on this screen. When you're ready to se
 
 > #### A handy tip -
 >
-> On the top right of the screen, by the maximise/close buttons, there's an ellipsis menu. From here, you can add a second tab to the Story Editor window. We recommend adding a Game tab so you can preview your game within the Story Editor. There aren't on-screen play controls, so use Ctrl+P/Cmd+P to play and stop the preview.
+> On the top right of the screen, by the maximise/close buttons, there's an ellipsis menu. From here, you can add a second tab to the Story Editor window. We recommend adding a Game tab so you can preview your game within the Story Editor. There aren't on-screen play controls in this viewer, so use Ctrl+P/Cmd+P to play and stop the preview.
 
 #### 1. Board list
 
