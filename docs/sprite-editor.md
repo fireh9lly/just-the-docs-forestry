@@ -11,11 +11,21 @@ has_toc: false
 
 The Sprite Editor allows you to configure the characters and visible objects that will appear in your game. Once you've created some sprites in the Sprite Editor, you can add them to your scenes using the **AddSprite** action.
 
+## Anatomy of the Sprite Editor
+
 ![](/assets/images/new-sprite.png)
 
 The left-hand panel shows a list of sprites already configured in your project. Clicking on one of these will open the sprite in the editor.
 
 The centre panel shows the currently-selected _layer_ of the sprite. For simple sprites you may only want to use one layer, but more complex characters with varying facial expressions, poses, and outfits, may need multiple independent layers to be configured. At the top of this section is the layer name, and an **offset** that can be used to control where the layer's images appear on the sprite; for example, if your character sometimes wears a hat as part of their outfit, your "Hat" layer might have an offset of **X: 0, Y: 450**. Layer offsets are given in pixels, where **0, 0** is the centre of the sprite, **X** goes from left (negative) to right (positive), and **Y** goes from bottom (negative) to top (positive).
+
+> ### Tips for working with layers
+>
+> Every layer will **always be placed at the same coordinate,** but sometimes layers might be significantly different shapes and sizes. The most efficient way to handle this is to make sure that each layer _image_ has the same dimensions as your entire base sprite, even if most of the image is therefore empty. There is no need to worry about file size, because a large area of transparent pixels will compress virtually to nothing when the PNG is saved.
+>
+> #### "My layers are a different size to the base image and positioning them is a pain!"
+>
+> Try making a temporary Start node that displays the sprite with the relevant layers showing, then Play your game. In the live preview (in the Unity editor itself), you can then drag the layer into position using the mouse. When it looks good, take a note of the coordinates displayed in the inspector - you can then use that as the position of the layer in the Spite Editor.
 
 Below the offset you can see a list of the **states** (animations) belonging to the layer. You can select a state by clicking on it, or click the "+ Add state" button to add a new state. Right-clicking a state will allow you to rename or delete it.
 
