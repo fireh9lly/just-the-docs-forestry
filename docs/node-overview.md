@@ -9,6 +9,15 @@ has_toc: false
 ---
 # Node Overview
 
+#### Table of Contents
+
+1. [Did you say 'Node'?](https://vnkit.axile.studio/docs/node-overview/#did-you-say-node)
+2. [Anatomy of a Node](https://vnkit.axile.studio/docs/node-overview/#anatomy-of-a-node)
+3. [Node behaviour](https://vnkit.axile.studio/docs/node-overview/#node-behaviour)
+4. [The Action Editor](https://vnkit.axile.studio/docs/node-overview/#the-action-editor)
+5. [Markup](https://vnkit.axile.studio/docs/node-overview/#markup)
+6. [Things to watch out for](https://vnkit.axile.studio/docs/node-overview/#things-to-watch-out-for)
+
 ## Did you say 'Node'?
 
 A _Node_ is the basic building block of a VNKit game.
@@ -67,7 +76,7 @@ If neither of these are the case, the game will wait for any sprite movements or
 
 ## The Action Editor
 
-By clicking `Add action`, it will open the Action Editor. The Action Editor allows your Node to do actions that change the game. For more on this, see the Action Editor. _(Fix this!)_
+By clicking `Add action`, it will open the Action Editor. The Action Editor allows your Node to do actions that change the game. For more on this, see the Action Editor - Overview. (_Not done yet!_)
 
 ## Markup
 
@@ -107,10 +116,10 @@ In a branch, VNKit decides which Node to go to by checking the conditions of the
 
 Also, check you are using the right expressions:
 
-* Check that you are putting the inequality in front of the equals sign for _greater than and equal to_ and _less than and equal to_ checks - `PlayerCash>=300`, not `PlayerCash=>300`
+* Check that you are putting the inequality in front of the equals sign for _greater than and equal to_ and _less than and equal to_ checks - `PlayerCash`**`>=`**`300`, not `PlayerCash=>300`
 * Have you accounted for all possible conditions?
   * If you have set up a two-pathed branch for `DatedMiguel > 3` and `DatedMiguel < 3`, what happens if the player has dated him exactly 3 times? Use _greater than or equal to_ `>=` or _less than or equal to_ `<=` to avoid problems like this.
-  * A variable that is being subtracted from can go into negative numbers. If the value represents an amount that doesn't make sense for it to go lower than 0 - e.g. `playerGoldPieces`, `numberOfGummyWorms` - this can cause unexpected behaviour. For numbers like this, it's best to use `max(ArrowsInQuiver -1, 0)` instead of `ArrowsInQuiver -1`.
+  * A variable that is being subtracted from can go into negative numbers. If the value represents an amount that doesn't make sense to go lower than 0 - e.g. `playerGoldPieces`, `numberOfGummyWorms` - this can cause unexpected behaviour. For numbers like this, it's best to use `max(ArrowsInQuiver -1, 0)` instead of `ArrowsInQuiver -1`.
 * Be careful using conditions to check for `Boolean=false`. When a Boolean variable cannot be found by VNKit, it defaults to _null_, not to false. Since you will usually be setting a story flag to True at the same time as you create it, it is usually better practice to check that a story flag has not been set by checking for `not Boolean`, which accepts both `Boolean=false` and `Boolean=null`.
 
 ### "I have a complex project with backstage processes that isn't working as it should."
