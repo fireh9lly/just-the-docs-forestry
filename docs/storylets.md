@@ -23,7 +23,7 @@ In VNKit, Storylets are Boards with the Storylet option applied. The player can 
 > _Pictured: A visual novel with a branching narrative._
 >
 > With storylets, each potential part of the story is catalogued and tagged, like index cards in a pre-computer-age library. Also like cards, the storylets don't need to be in any particular order, and can be shuffled and dealt. When the player reaches a point where a storylet is summoned, VNKit gathers every card labelled to fit the player's situation, then shuffles the stack and deals a card out to the player at random.
-
+> 
 > ![](/assets/images/index-cards.gif)
 >
 > _Pictured: A visual novel with storylets._
