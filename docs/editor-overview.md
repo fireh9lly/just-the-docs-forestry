@@ -70,7 +70,7 @@ Use this to keep notes for yourself about the project. You can use it to note do
 
 Nodes are the building block of a VNKit game. They will store text the player will actually see, display images and music, remember and reference variables, and will follow after each other in the order they are linked together. For more about them, see [Node overview](/docs/node-cheatsheet/).
 
-#### 6 Statistics
+#### 6. Statistics
 
 Displays the number of Nodes in the project and the total word count.
 
