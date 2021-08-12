@@ -1,6 +1,6 @@
 ---
 layout: default
-has_children: true
+has_children: false
 title: Walkthrough - setting up a simple game
 nav_order: 101
 parent: ''
