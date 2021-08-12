@@ -21,7 +21,7 @@ The centre panel shows the currently-selected _layer_ of the sprite. For simple 
 
 > ### Tips for working with layers
 >
-> Every layer will **always be placed at the same coordinate,** but sometimes layers might be significantly different shapes and sizes. The most efficient way to handle this is to make sure that each layer _image_ has the same dimensions as your entire base sprite, even if most of the image is therefore empty. There is no need to worry about file size, because a large area of transparent pixels will compress virtually to nothing when the PNG is saved.
+> Every frame belonging to a layer will **always be placed at the same coordinate,** but sometimes frames might be significantly different shapes and sizes. The easiest way to handle this is to make sure that each frame _image_ has the same dimensions as your entire base sprite, even if most of the image is therefore empty. There is no need to worry about file size, because a large area of transparent pixels will compress virtually to nothing when the PNG is saved.
 >
 > #### "My layers are a different size to the base image and positioning them is a pain!"
 >
@@ -32,9 +32,9 @@ Below the offset you can see a list of the **states** (animations) belonging to 
 When a sprite is selected, the right panel will show the basic information belonging to the sprite:
 
 * The sprite's **Name** can be changed here.
-* A default **Scale** can be defined; this can be useful if your images are bigger than the size of the (virutal) game window, and need to be shrunk down.
-* An audio **Blip** can be set here, which will play when the game is displaying a line of this character's dialogue (if the _text transition mode_ is set to "Typing"; see the **Config Zone** section).
-* A **Notes** section is provided for general annotations, reminders and developer commentary relating to the character; this will not be visible in-game.
+* A default **Scale** can be defined; this can be useful if your images are bigger than the size of the (virtual) game window, and need to be shrunk down.
+* An audio **Blip** can be set here, which will play when the game is displaying a line of this character's dialogue (if the _text transition mode_ is set to "Typing"; see the [Config Zone](/docs/config-zone/) section).
+* A **Notes** section is provided for general annotations, reminders and developer commentary relating to the character or sprite; this will not be visible in-game.
 * Underneath the Notes section is a list of **layers**. Layers can be added, removed and reordered here. Layers appearing higher in this list will be displayed on top of lower layers when the game is running. It's not possible to reorder layers at runtime.
 * The **Delete sprite** button will show a confirmation window before deleting the sprite from the game data.
 * The **Appearances** section shows a list of boards on which this sprite appears, which can be useful for debugging and analysis.
