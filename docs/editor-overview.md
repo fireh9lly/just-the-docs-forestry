@@ -2,7 +2,9 @@
 layout: default
 has_children: false
 title: Editor overview - the Boards screen
-nav_order: 20
+nav_order: 3
+parent: ''
+has_toc: false
 
 ---
 # Editor overview
