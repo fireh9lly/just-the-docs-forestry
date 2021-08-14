@@ -35,8 +35,24 @@ On the second node, press the `+ Add choice` button a few times until you have t
 
 You'll need somewhere for all those Choices to lead, so make a new Node for each of the Choices to lead to, and link it up. (_Remember - you don't have to insert the new cable into the Node's connector. You can link by dragging the connector anywhere on the body of a node._)
 
-Step 3 - Variables and expressions 
+Now you have a branch!
 
-We're going to set up a "hub and spoke" structure here - a common shape that allows the player to read through as many options as they choose in any order before continuing. We also want to have the game remember which of these scenes we have seen, so once the player has seen all of them, they can progress to the next part of the story.
+## Step 3 - Variables and conditions
 
-Set up nodes for every answer, and then loop each answer back to the node itself.
+We're going to set up a "hub and spoke" structure here - a common shape that allows the player to read through as many options as they choose in any order before continuing. We also want to have the game remember which of these choices the player has seen, so once they have read at least one thing, they can progress to the next part of the story.
+
+Label the answer node for "I have some questions" with something that makes it clear what it is (like "Question hub"). Then fill out the questions the player can ask.
+
+Set up nodes for every answer, and then connect each answer back to the Hub.
+
+![](/assets/images/nodes4.gif)
+
+You'll now set up a condition for that last answer, so it will only appear when the player has done everything.
+
+Give a condition to the Node that will represent the next part of the story. Immediately, you'll see coloured chips representing variable use appear above your Node. In the previous Node (you may have to click on it to refresh it), you'll see the condition written out as a reference.
+
+![](/assets/images/nodes5.gif)
+
+> #### Tip -
+>
+> Unlike some other visual novel engines you might be used to, you don't have to specify "`=true`". Just give the name of the variable if it has to be true before the Node will show up. If the variable needs to be False or Null (_null_ is for when the variable does not represent anything, most likely because you haven't set it to anything yet), you can just say "`not (Variable)`".
