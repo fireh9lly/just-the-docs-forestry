@@ -2,7 +2,7 @@
 layout: default
 has_children: false
 title: Walkthrough - setting up a simple game
-nav_order: 101
+nav_order: 999
 parent: ''
 has_toc: false
 
@@ -19,7 +19,7 @@ The following is a guide for setting up a simple game in VNKit. It's aimed to he
 
 When you finish setting up VNKit and enter the Story Editor, you'll be faced with the Board Viewer screen. One Node  is already placed for you.
 
-Begin by typing out the first textbox of your story. When you've done that, right click, click 'Add node'. Then type the second textbox of your story. Then drag from the circle connector on the right of the first Node to link it to the second Node!
+Begin by typing out the first textbox of your story. When you've done that, right click, click 'Add node'. Then type the second textbox of your story. Then drag from the circle connector on the right of the first Node to link it to the second Node.
 
 ![](/assets/images/nodes1.gif)
 
@@ -47,7 +47,7 @@ Set up nodes for every answer, and then connect each answer back to the Hub.
 
 ![](/assets/images/nodes4.gif)
 
-You'll now set up a condition for that last answer, so it will only appear when the player has done everything.
+You'll now set up a condition for that last answer, so it will only appear when the player has done something.
 
 Give a condition to the Node that will represent the next part of the story. Immediately, you'll see coloured chips representing variable use appear above your Node. In the previous Node (you may have to click on it to refresh it), you'll see the condition written out as a reference.
 
@@ -79,7 +79,7 @@ You have now learned the basics of building branching path narrative games! But 
 
 Astra, in our game, is going to have a value that represents how she feels about us. She'll like us more if we're good students, and less if we mess her around.
 
-Obviously, modelling the blurry, confusing world of human emotion isn't possible in a computer game, but we can make something that feels pretty close by representing Astra's feelings as a number. If the number goes up, she likes us more, and if it goes down, she likes us less. Later in the game, we can then check how Astra feels about us and go to different Nodes depending on the value, letting her express her feelings to us in words and actions.
+Making an exact replica of the blurry, confusing world of human emotion isn't possible in a computer game (or in science, or in most art), but we can make something that feels pretty close by representing Astra's feelings as a number. If the number goes up, she likes us more, and if it goes down, she likes us less. We can then create Node structures which flow differently depending on how high that number is, letting her express her feelings to us in words and actions.
 
 We'll have Astra like us more when we tell her we're ready to use VNKit, so on the Node just after we have done this, we will add an Action and set a variable representing Astra's emotions.
 
@@ -125,7 +125,7 @@ We have to use different syntax to keep the number from going below 0:
 
 What this does is compare `AstraAffection-1` to `0`, and sets the `AstraAffection` variable to whichever is higher.
 
-While this is a little arbitrary when dealing with a number representing an abstraction, like Affection values, this is important when working with variables relating to physical objects - coins in the player's wallet, chocolate boxes left to give to the boys on Valentine's Day, or bullets in a gun.
+While this is a little arbitrary when dealing with a number representing an abstraction, like Affection values, this is important when working with variables relating to physical objects - coins in the player's wallet, chocolate boxes left to give to the boys on Valentine's Day, or bullets in a gun. (What would bullets look like?)
 
 > #### Game design tip - Affection values
 >
@@ -149,7 +149,7 @@ In Unity's Project window, navigate to Assets > Resources > VNKit > Backgrounds.
 >
 > In this walkthrough, we're using a photo background, so Unity's default settings are fine. However, if you're making a game using pixel art, you will find that your images are unacceptably blurry.
 >
-> If you are having this problem, highlight your image in the Project Assets window, then look to the Inspector. Change the Advanced > Filter Mode setting to "Point (no filter)". Your images should now have pixel-perfect scaling.
+> If you are having this problem, highlight your image in the Project Assets window, then look at the Inspector. Change the Advanced > Filter Mode setting to "Point (no filter)". Your images should now have pixel-perfect scaling.
 >
 > ![](/assets/images/pointfiltering.PNG)
 
@@ -159,4 +159,4 @@ Once you've added the background image to the Backgrounds folder, you can add it
 
 Here you can see all of the backgrounds that you have added to the project folders. Click the one you want to add to select it.
 
-The ScaleMode parameter determines how the background will be displayed. Fit Height displays the background where the Height will be equal to the height of the screen, and the Width will be ignored. Fit Width displays the image at the same Width as the screen and ignores the height. Cover automatically scales the image to cover the whole of the screen, keeping the aspect ratio intact - so 
+The ScaleMode parameter determines how the background will be displayed. Fit Height displays the background where the Height will be equal to the height of the screen, and the Width will be ignored. Fit Width displays the image at the same Width as the screen and ignores the height. Cover automatically scales the image to cover the whole of the screen, keeping the aspect ratio intact - so this is most likely to be the setting you need. (_Note that none of these options stretch the image!_)
