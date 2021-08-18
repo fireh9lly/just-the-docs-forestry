@@ -162,3 +162,5 @@ Once you've added the background image to the Backgrounds folder, you can add it
 Here you can see all of the backgrounds that you have added to the project folders. Click the one you want to add to select it.
 
 The ScaleMode parameter determines how the background will be displayed. Fit Height displays the background where the Height will be equal to the height of the screen, and the Width will be ignored. Fit Width displays the image at the same Width as the screen and ignores the height. Cover automatically scales the image to cover the whole of the screen, keeping the aspect ratio intact - so this is most likely to be the setting you need. (_Note that none of these options stretch the image!_)
+
+\[There is also Offset... (not ready yet)\]
