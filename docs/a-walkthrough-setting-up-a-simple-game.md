@@ -9,7 +9,7 @@ has_toc: false
 ---
 # Walkthrough
 
-The following is a guide for setting up a simple game in VNKit. It's aimed to help those who are beginners in both VNKit and Unity get familiar with the system and workflow.
+The following is a guide for setting up a simple game in VNKit. It's aimed to help those who are **beginners** in both VNKit and Unity get familiar with the system and workflow.
 
 > ### Step 0 - Getting VNKit Set Up
 >
@@ -125,7 +125,7 @@ We have to use different syntax to keep the number from going below 0:
 
 What this does is compare `AstraAffection-1` to `0`, and sets the `AstraAffection` variable to whichever is higher.
 
-While this is a little arbitrary when dealing with a number representing an abstraction, like Affection values, this is important when working with variables relating to physical objects - coins in the player's wallet, chocolate boxes left to give to the boys on Valentine's Day, or bullets in a gun. (What would bullets look like?)
+While this is a little arbitrary when dealing with a number representing an abstraction, like Affection values, this is important when working with variables relating to physical objects - coins in the player's wallet, chocolate boxes left to give to the boys on Valentine's Day, or bullets in a gun. (What would -3 bullets look like?)
 
 > #### Game design tip - Affection values
 >
@@ -134,6 +134,8 @@ While this is a little arbitrary when dealing with a number representing an abst
 ## Step 6 - Adding images and sound to your game
 
 VNKit is a plugin for Unity, and Unity is designed to handle media files. Therefore, all media files you use in VNKit are accessed through Unity's systems for doing this.
+
+### a) Background
 
 We're going to start by adding a background image to your game.
 
