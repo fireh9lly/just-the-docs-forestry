@@ -33,7 +33,7 @@ On the second node, press the `+ Add choice` button a few times until you have t
 
 ![](/assets/images/nodes2.gif)
 
-You'll need somewhere for all those Choices to lead, so make a new Node for each of the Choices to lead to, and link it up. (_Remember - you don't have to insert the new cable into the Node's connector. You can link by dragging the connector anywhere on the body of a node._)
+You'll need somewhere for all those Choices to lead, so make a new Node for each of the Choices to lead to, and link it up. (_Remember - you don't have to insert the new cable into the Node's connector. You can link by dragging the connector anywhere on the body of a node._) Cables coming out of Choices are always **<span style="color:#ffb333">yellow</span>**.
 
 Now you have a branch!
 
@@ -46,6 +46,8 @@ Label the answer node for "I have some questions" with something that makes it c
 Set up nodes for every answer, and then connect each answer back to the Hub.
 
 ![](/assets/images/nodes4.gif)
+
+_(ALPHA ALERT - oops, that connector coming from Node #2 should be coming out of a Choice that says "I have some questions...")_
 
 You'll now set up a condition for that last answer, so it will only appear when the player has done something.
 
