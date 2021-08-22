@@ -19,7 +19,12 @@ has_toc: false
 2. Open the hub and install a version of Unity; the current recommended version is **Unity 2020**.
 3. In the Unity Hub, create a new project. When asked what kind of project you want to make, select **2D**.
 4. You will have to wait for Unity to create the project, which will take _some time_ (about 2-5 minutes). Take the opportunity to grab a cup of tea, if you like.
-5. Download the VNKit package, and extract it to a new folder using whichever software you prefer (e.g. Microsoft's inbuilt Compressed File tool, PeaZip, 7Zip, etc). Once extracted, copy the `studio.axile.vnkit` folder into the Packages folder of your new project. Don't forget - you can quickly open a window for it by selecting your project in the Unity Hub list, then choosing 'Show in Explorer' (Windows)/ 'Reveal in Finder' (Mac).
+   1. Download the VNKit package, and extract it to a new folder using whichever software you prefer (e.g. Microsoft's inbuilt Compressed File tool, PeaZip, 7Zip, etc). Once extracted, copy the `studio.axile.vnkit` folder into the Packages folder of your new project. (Don't forget - you can quickly open a window for it by selecting your project in the Unity Hub list, then choosing 'Show in Explorer' (Windows)/ 'Reveal in Finder' (Mac).)
+
+      Once you've moved the package into your Packages folder and gone back into the Unity editor window, a progress bar window should appear. If you don't see one, double-check your folder structure, and make sure it looks like this:
+
+        
+      **screenshot goes here!**
 
 ### Part 2 - Putting VNKit into your game
 
@@ -31,10 +36,10 @@ has_toc: false
    * the Canvas Scaler UI Scale Mode is set to "Scale With Screen Size",
    * the Screen Match mode is set to Expand.
 
-   You will now need to give Unity a frame of reference for the size of VNKit. 
+   You will now need to give Unity a frame of reference for the size of VNKit.
    * In the Inspector, change the Canvas Scaler Reference Resolution to an appropriate size and aspect ratio for a virtual screen. _(Note that this is different to the actual, physical resolution of your game when on devices - it's a reference size used internally. Your game will display correctly on bigger or smaller screens.)_ **If you're not sure what to use here, set it to X 1920 Y 1080.**
-   
-    ![](/assets/images/menu4.png)
+
+   ![](/assets/images/menu4.png)
 3. Right click on the Canvas that you have just created in the Hierarchy. Select 'Create Empty' from the menu that appears. (_Optional - you may want to rename the Empty to something appropriate, like 'VNKit'._)
 
    ![](/assets/images/menu2.png)
