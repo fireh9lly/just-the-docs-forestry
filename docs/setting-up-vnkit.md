@@ -19,12 +19,12 @@ has_toc: false
 2. Open the hub and install a version of Unity; the current recommended version is **Unity 2020**.
 3. In the Unity Hub, create a new project. When asked what kind of project you want to make, select **2D**.
 4. You will have to wait for Unity to create the project, which will take _some time_ (about 2-5 minutes). Take the opportunity to grab a cup of tea, if you like.
-   1. Download the VNKit package, and extract it to a new folder using whichever software you prefer (e.g. Microsoft's inbuilt Compressed File tool, PeaZip, 7Zip, etc). Once extracted, copy the `studio.axile.vnkit` folder into the Packages folder of your new project. (Don't forget - you can quickly open a window for it by selecting your project in the Unity Hub list, then choosing 'Show in Explorer' (Windows)/ 'Reveal in Finder' (Mac).)
+5. Download the VNKit package, and extract it to a new folder using whichever software you prefer (e.g. Microsoft's inbuilt Compressed File tool, PeaZip, 7Zip, etc). Once extracted, copy the `studio.axile.vnkit` folder into the Packages folder of your new project. (Don't forget - you can quickly open a window for it by selecting your project in the Unity Hub list, then choosing 'Show in Explorer' (Windows)/ 'Reveal in Finder' (Mac).)
+6. Once you've moved the package into your Packages folder and gone back into the Unity editor window, a progress bar window should appear.
 
-      Once you've moved the package into your Packages folder and gone back into the Unity editor window, a progress bar window should appear. If you don't see one, double-check your folder structure, and make sure it looks like this:
+   If you don't see one, double-check your folder structure, and make sure it looks like this:
 
-        
-      **screenshot goes here!**
+   **![](/assets/images/vnkit-folder.PNG)**
 
 ### Part 2 - Putting VNKit into your game
 
