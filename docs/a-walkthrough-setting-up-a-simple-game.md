@@ -99,7 +99,7 @@ But if we run the game right now, we'd get an error. It's impossible to add 1 to
 
 #### Init
 
-We have to set `AstraAffection` before the first point that we are going to use it in the story. Since we might go back and add earlier points, the best place to put it is in a new node before the first Node. (This is called an Initialisation, or Init for short.) We'll set it as the new Start Node. On this Node, we will use another `SetVariable` action and set `AstraAffection` to `0`
+We have to set `AstraAffection` before the first point that we are going to use it in the story. Since we might go back and add earlier points, the best place to put it is in a new node before the first Node. We'll set it as the new Start Node. Name it "Init" (short for initialisation) by typing that in the `Node` box. On this Node, we will use another `SetVariable` action and set `AstraAffection` to `0`.
 
 ![](/assets/images/nodes_makinginit.gif)
 
@@ -161,7 +161,11 @@ In Unity's Project window, navigate to Assets > Resources > VNKit > Backgrounds.
 
 Once you've added the background image to the Backgrounds folder, you can add it into your game. Re-open the Story Editor (you might need to click on the VNKit Canvas in the Hierarchy window to get the Open Story Editor button back). Go to your first node (the Init), click Add Action, and add:
 
-the Set Background action. (_It's in the Backgrounds section._)
+* The `Hide Textbox` action (_in the "Textbox" section_). When we preview the game, the textbox will display by default, unless we are using Hide Textbox to get it out of our way. This will help us see the position of the assets better. The Fade parameter lets us set a fade time, but don't worry about it for now - this is just for testing.
+* The `Wait for input` action (_in the "Variables and events" section_). This will cause the game to wait for a click before progressing onto the next node - if we don't use it, the game will flow straight through into Astra's first line, bringing the textbox straight back up again to block our view. There aren't any parameters on this action.
+* The `Set Background` action. (_It's in the Backgrounds section._)
+
+![](/assets/images/fadeut.PNG)
 
 ![](/assets/images/nodes_bgpicker.PNG)
 
