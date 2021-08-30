@@ -99,7 +99,7 @@ But if we run the game right now, we'd get an error. It's impossible to add 1 to
 
 #### Init
 
-We have to set `AstraAffection` before the first point that we are going to use it in the story. Since we might go back and add earlier points, the best place to put it is in a new node before the first Node. We'll set it as the new Start Node. Name it "Init" (short for initialisation) by typing that in the `Node` box. On this Node, we will use another `SetVariable` action and set `AstraAffection` to `0`.
+We have to set `AstraAffection` before the first point that we are going to use it in the story. Since we might go back and add earlier points, the best place to put it is in a new node before the first Node. We'll set it as the new Start Node. Name it "Init" (short for "Initialisation") by typing that in the `Node` box. On this Node, we will use another `SetVariable` action and set `AstraAffection` to `0`.
 
 ![](/assets/images/nodes_makinginit.gif)
 
@@ -190,3 +190,7 @@ For our background image, we don't need perfect precision - we just want most of
 ![](/assets/images/bgoffset-1.png)
 
 This same coordinate system is used for displaying sprites as well. Let's put Astra on the screen.
+
+### b) Sprite editor
+
+\[coming soon\]
