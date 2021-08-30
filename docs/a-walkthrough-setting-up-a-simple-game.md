@@ -89,17 +89,17 @@ We'll have Astra like us more when we tell her we're ready to use VNKit, so on t
     Name: AstraAffection
     Value: AstraAffection+1
 
-We have to say `Value: AstraAffection+1` because VNKit needs to have perfectly unambiguous instructions on which numbers it's supposed to add together - if we instead just said `Value: +1`, it would create an error. What we're trying to do is to add 1 to _what the value was before,_ so we state it like this. 
+We have to say `Value: AstraAffection+1` because VNKit needs to have perfectly unambiguous instructions on which numbers it's supposed to add together - if we instead just said `Value: +1`, it would create an error. What we're trying to do is to add 1 to _what the value was before,_ so we state it like this.
 
 > #### Good practices
 >
 > It's true that since this is the first point that we can gain `AstraAffection` in the game, we _could_ just set the variable to `1`, but if we wanted to go back and create other ways to get Affection earlier in the game, we'd have to change everything. Doing it this way allows us to create our visual novel with more flexibility.
 
-But if we run the game right now, we'd get an error. It's impossible to add 1 to `AstraAffection` because we haven't told VNKit what it is already. A variable that hasn't been given a value yet equals `null`, a value that represents nothing. You can think of `null` as like an empty box, or a blank piece of paper - it's impossible to do any arithmetic with `null`, because it isn't even a number. We need to assign a number value to `AstraAffection` so we can start making sense of it.
+But if we run the game right now, we'd get an error. It's impossible to add 1 to `AstraAffection` because we haven't told VNKit what `AstraAffection` is to start with. A variable that hasn't been given a value yet equals `null`, a value that represents "nothing". You can think of `null` as like an empty box, or a blank piece of paper - it's impossible to do any arithmetic with `null`, because it isn't even a number. We need to assign a number value to `AstraAffection` so we can use it.
 
 #### Init
 
-The best place to set the value of AstraAffection is before the first point that we are going to use it, so we're going to add a new node before the first node. We'll set it as the new Start node. On this node, we will use another SetVariable action and set `AstraAffection` to 0.
+We have to set `AstraAffection` before the first point that we are going to use it in the story. Since we might go back and add earlier points, the best place to put it is in a new node before the first Node. (This is called an Initialisation, or Init for short.) We'll set it as the new Start Node. On this Node, we will use another `SetVariable` action and set `AstraAffection` to `0`
 
 ![](/assets/images/nodes_makinginit.gif)
 
@@ -107,7 +107,7 @@ The best place to set the value of AstraAffection is before the first point that
     Name: AstraAffection
     Value: 0
 
-Now, when the player adds to Astra's affection value, it won't throw an error.
+Now, when the player adds `1` to Astra's affection value, it will be added to `0`, which is a valid operation in VNKit.
 
 ## Decrementing a variable
 
@@ -119,9 +119,9 @@ If we wanted to, we could just do the same as what we did above:
     Name: AstraAffection
     Value: AstraAffection-1
 
-...But this would allow us to go into negative numbers. That could be fine (it's actually a great way of designing an affection system - where _0_ is perfectly neutral, negative numbers express negative feelings and positive numbers express positive feelings) but in our game, **we don't want the number to be able to go below 0**. (Astra isn't ever going to really _dislike_ the player, she's just going to like us more if we're good students.)
+...But this would allow us to go into negative numbers. That could be fine (it's a common way of designing an affection system - where `0` is perfectly neutral, negative numbers express negative feelings and positive numbers express positive feelings) but in our game, **we don't want the number to be able to go below `0`**. (Astra isn't ever going to really _dislike_ the player - she's just going to like us more if we're good students.)
 
-We have to use different syntax to keep the number from going below 0:
+We have to use different syntax to keep the number from going below `0`
 
     SetVariable
     Name: AstraAffection
@@ -137,7 +137,7 @@ While this is a little arbitrary when dealing with a number representing an abst
 
 ## Step 6 - Adding images and sound to your game
 
-VNKit is a plugin for Unity, and Unity is designed to handle media files. Therefore, all media files you use in VNKit are accessed through Unity's systems for doing this.
+Media files you use in VNKit will need to be imported into Unity's inbuilt Resources system before you can use them.
 
 ### a) Background
 
@@ -147,7 +147,7 @@ Close the Story Editor.
 
 ![](/assets/images/bg_closeeditor.gif)
 
-In Unity's Project window, navigate to Assets > Resources > VNKit > Backgrounds. This will open up the Backgrounds folder for your game. Drag and drop your background image to it from your file explorer window.
+In Unity's Project window, navigate to Assets > Resources > VNKit > Backgrounds. This will open up the Backgrounds folder for your game. Drag and drop your background image into the Backgrounds folder, from your file explorer window.
 
 ![](/assets/images/bg_bgadd.gif)
 
@@ -159,10 +159,30 @@ In Unity's Project window, navigate to Assets > Resources > VNKit > Backgrounds.
 >
 > ![](/assets/images/pointfiltering.PNG)
 
-Once you've added the background image to the Backgrounds folder, you can add it into your game. Re-open the Story Editor (you might need to click on the VNKit Canvas in the Heirarchy window to get the Open Story Editor button back). Go to your first node, click Add Action, and choose the Set Background action. (_It's in the Backgrounds section._)
+Once you've added the background image to the Backgrounds folder, you can add it into your game. Re-open the Story Editor (you might need to click on the VNKit Canvas in the Hierarchy window to get the Open Story Editor button back). Go to your first node (the Init), click Add Action, and add:
 
-![](/assets/images/background-params.PNG)
+the Set Background action. (_It's in the Backgrounds section._)
 
-Here you can see all of the backgrounds that you have added to the project folders. Click the one you want to add to select it.
+![](/assets/images/nodes_bgpicker.PNG)
 
-The ScaleMode parameter determines how the background will be displayed. Fit Height displays the background where the Height will be equal to the height of the screen, and the Width will be ignored. Fit Width displays the image at the same Width as the screen and ignores the height. Cover automatically scales the image to cover the whole of the screen, keeping the aspect ratio intact - so this is most likely to be the setting you need. (_Note that none of these options stretch the image!_)
+Here you can see all of the backgrounds that you have added to the project folders. Click the one you want to use.
+
+The ScaleMode parameter determines how the background will be displayed. _Fit Height_ will fit the background to the height of the screen, and the Width will be ignored. _Fit Width_ displays the image at the same Width as the screen and ignores the height. _Cover_ automatically scales the image to cover the whole of the screen, keeping the aspect ratio intact - this will be the most common parameter for typical projects. (_Note that none of these options distort or stretch the image!_)
+
+The photo we are using here has a tall aspect ratio, while our game is in a wide aspect ratio. Therefore, some of our background is going to be cut off. We can use the Offset parameter to shift the image around so we see the correct part of it.
+
+#### Handling coordinates
+
+The Offset parameter in Set Background allows a background image to be placed at the coordinates on the screen that you choose, using the centre of the image as the reference point, or _anchor_. You can imagine the background as a printed photograph with a drawing pin in the exact centre, and the screen as a notice board - the coordinate you supply is the exact point on the board the pin will be stuck into.
+
+VNKit has two kinds of coordinates that it understands.
+
+The default mode is _relative_ coordinates. Here, each axis extends from -1 to 1, with 0 in the middle. This allows you to place an image on the screen _proportionally_, without having to worry about the exact pixel location. (For example, if you know you want a character's sprite to be displayed about a third of the way across from the left of the screen, you can place the sprite at `X: -0.33`.) The other mode is _absolute_ coordinates. This lets you place an image at an exact pixel value, for when perfect precision is needed.
+
+\[diagram goes here\]
+
+For our background image, we don't need perfect precision - we just want most of the floor to be in shot. So we'll set the coordinates as `X: 0, Y: 0.6`. This gives a good result when the game is previewed:
+
+![](/assets/images/bgoffset-1.png)
+
+This same coordinate system is used for displaying sprites as well. Let's put Astra on the screen.
