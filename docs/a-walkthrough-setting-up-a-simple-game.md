@@ -194,3 +194,5 @@ This same coordinate system is used for displaying sprites as well. Let's put As
 ### b) Sprite editor
 
 \[coming soon\]
+
+\[add Preview section! add TMP message!\]
