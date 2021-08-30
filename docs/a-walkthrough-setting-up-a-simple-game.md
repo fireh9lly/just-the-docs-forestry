@@ -45,19 +45,17 @@ Label the answer node for "I have some questions" with something that makes it c
 
 Set up nodes for every answer, and then connect each answer back to the Hub.
 
-![](/assets/images/nodes4.gif)
+![](/assets/images/nodes_fixed.gif)
 
-_(ALPHA ALERT - oops, that connector coming from Node #2 should be coming out of a Choice that says "I have some questions...")_
+You'll now set up a _Condition_ for that last answer, so it will only appear when the player has done something.
 
-You'll now set up a condition for that last answer, so it will only appear when the player has done something.
+Give a Condition to the Node that will represent the next part of the story. Immediately, you'll see coloured chips representing variable use appear above your Node. In the previous Node, you'll see the Condition written out. (Remember - this is just as a reference. If you want to change the Condition, you'll have to do it in the "Condition" section of the target node.)
 
-Give a condition to the Node that will represent the next part of the story. Immediately, you'll see coloured chips representing variable use appear above your Node. In the previous Node (you may have to click on it to refresh it), you'll see the condition written out as a reference.
-
-![](/assets/images/nodes5.gif)
+![](/assets/images/nodes_whatsbest.gif)
 
 > #### Tip -
 >
-> Unlike some other visual novel engines you might be used to, you don't have to specify "`=true`" - just give the name of the variable. If you're checking that something _isn't_ true, you can say "`not (Variable)`". (This also counts Null values for variables that you haven't set yet - really useful for checking story flags, since you'll only be creating them when you need to use them.)
+> Unlike some other visual novel engines you might be used to, you don't have to specify "`=true`" - just give the name of the variable. If you're checking that something _isn't_ true, you can say "`not (Variable)`". Doing it this way also counts Null values for variables that you haven't set yet - really useful for checking story flags, since you'll only be creating them when you need to use them.
 
 If you don't like the colours of the chips, you can change them in the sidebar:
 
@@ -79,9 +77,9 @@ You have now learned the basics of building branching path narrative games! But 
 
 #### Incrementing a variable
 
-Astra, in our game, is going to have a value that represents how she feels about us. She'll like us more if we're good students, and less if we mess her around.
+Astra, in our game, is going to have a value that represents how she feels about us. She'll like us more if we're good students, and less if we mess around.
 
-Making an exact replica of the blurry, confusing world of human emotion isn't possible in a computer game (or in science, or in most art), but we can make something that feels pretty close by representing Astra's feelings as a number. If the number goes up, she likes us more, and if it goes down, she likes us less. We can then create Node structures which flow differently depending on how high that number is, letting her express her feelings to us in words and actions.
+Making an exact model of the blurry, confusing world of human emotion isn't possible in a computer game (or in science, or pretty much anything else), but we can make something close enough for a video game by representing Astra's feelings as a number. If the number goes up, she likes us more, and if it goes down, she likes us less. We can then create Node structures which check the number, and flow to different places depending on how high it is, letting Astra express her feelings to us in words and actions.
 
 We'll have Astra like us more when we tell her we're ready to use VNKit, so on the Node just after we have done this, we will add an Action and set a variable representing Astra's emotions.
 
@@ -91,9 +89,13 @@ We'll have Astra like us more when we tell her we're ready to use VNKit, so on t
     Name: AstraAffection
     Value: AstraAffection+1
 
-The reason we're using `AstraAffection+1` is because we need to increment the value by specifying that we have to add 1 to _what the value is already_ - if we just set it to `+1`, it would create an error. (Since this is the first point that we can gain Affection in the game, we _could_ just set the variable to `1`, but it would be a problem if we wanted to go back and create other ways to get Affection earlier in the game. Doing it this way is much more flexible.)
+We have to say `Value: AstraAffection+1` because VNKit needs to have perfectly unambiguous instructions on which numbers it's supposed to add together - if we instead just said `Value: +1`, it would create an error. What we're trying to do is to add 1 to _what the value was before,_ so we state it like this. 
 
-But right now, `AstraAffection` doesn't equal _anything._ It doesn't equal `0`, it equals `null`, which is nothing. It's impossible to add `1` to `null` because `null` isn't even a number. We need to make sure that `AstraAffection` is a number before we start adding things to it.
+> #### Good practices
+>
+> It's true that since this is the first point that we can gain `AstraAffection` in the game, we _could_ just set the variable to `1`, but if we wanted to go back and create other ways to get Affection earlier in the game, we'd have to change everything. Doing it this way allows us to create our visual novel with more flexibility.
+
+But if we run the game right now, we'd get an error. It's impossible to add 1 to `AstraAffection` because we haven't told VNKit what it is already. A variable that hasn't been given a value yet equals `null`, a value that represents nothing. You can think of `null` as like an empty box, or a blank piece of paper - it's impossible to do any arithmetic with `null`, because it isn't even a number. We need to assign a number value to `AstraAffection` so we can start making sense of it.
 
 #### Init
 
@@ -164,5 +166,3 @@ Once you've added the background image to the Backgrounds folder, you can add it
 Here you can see all of the backgrounds that you have added to the project folders. Click the one you want to add to select it.
 
 The ScaleMode parameter determines how the background will be displayed. Fit Height displays the background where the Height will be equal to the height of the screen, and the Width will be ignored. Fit Width displays the image at the same Width as the screen and ignores the height. Cover automatically scales the image to cover the whole of the screen, keeping the aspect ratio intact - so this is most likely to be the setting you need. (_Note that none of these options stretch the image!_)
-
-\[There is also Offset... (not ready yet)\]
