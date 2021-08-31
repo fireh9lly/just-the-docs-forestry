@@ -325,7 +325,7 @@ If `index` is less than `0` or greater than the size of `array`, the return valu
 
 ### isNaN(number)
 
-Returns `true` if the given value is `NaN` ("not a number"). `NaN` is a special 'error value' that gets returned when performing an invalid operation, like dividing zero by zero. Any arithmetic operations involving `NaN` (adding `NaN`, multiplying `NaN`, etc) will return `NaN`.
+Returns `true` if the given value is `NaN` ("not a number"). `NaN` is a special 'error value' that gets returned when dividing zero by zero. Any arithmetic operations involving `NaN` (adding `NaN`, multiplying `NaN`, etc) will return `NaN`.
 
 ### len(value)
 
