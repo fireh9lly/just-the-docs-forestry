@@ -313,10 +313,6 @@ Retrieves an array of available save slot names, as strings. Thes can be used wi
 
 Returns the current value of a timer with the given name. If the timer does not exist or has finished, this function returns `null`.
 
-### len(value)
-
-Returns the number of elements in an array, or the length of a string (the number of characters in the string).
-
 ### insert(array, index, value)
 
 Creates a new copy of the array **array**, with the **value** inserted at the position **index**. The value is placed immediately before the current element in that position (if any), so
@@ -326,6 +322,14 @@ Creates a new copy of the array **array**, with the **value** inserted at the po
 will make a copy of `array`, place the string `"bees"` at the start, and return the new copy.
 
 If `index` is less than `0` or greater than the size of `array`, the return value will be the same as `array`. If `index` is equal to `length(array)` then `value` will be placed at the end of the new copy of `array`.
+
+### isNaN(number)
+
+Returns `true` if the given value is `NaN` ("not a number"). `NaN` is a special 'error value' that gets returned when performing an invalid operation, like dividing zero by zero. Any arithmetic operations involving `NaN` (adding `NaN`, multiplying `NaN`, etc) will return `NaN`.
+
+### len(value)
+
+Returns the number of elements in an array, or the length of a string (the number of characters in the string).
 
 ### max(number0, number1, number2...)
 
