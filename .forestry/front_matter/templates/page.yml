@@ -49,3 +49,6 @@ pages:
 - docs/sprite-editor.md
 - docs/storylets.md
 - docs/ui-editor.md
+- docs/walkthrough-adding-images-and-sound-to-your-game.md
+- docs/walkthrough-start-here-to-learn-vnkit.md
+- docs/walkthrough-tracking-values-with-variables.md
