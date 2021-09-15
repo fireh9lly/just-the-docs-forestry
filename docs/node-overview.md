@@ -124,7 +124,11 @@ Also, check you are using the right expressions:
 
 ### "All the text in the Story Editor is blank/corrupted!"
 
-This seems to be a bug with Unity's "UI Toolkit" framework, which VNKit uses. Closing and reopening the Unity editor may fix this temporarily, but if it persists: close Unity, delete the `Library/` folder from your project (it's safe to delete this), then reopen the project again. Unity will rebuild the library folder automatically, which will take a long time, but it _should_ clear the bug.
+This seems to be a bug with Unity's "UI Toolkit" framework, which VNKit uses, and may be triggered by exporting a build of your project. There seem to be a few different ways to solve this:
+
+* Open the Package Manager (Window menu > Package Manager) and refresh the package list. This is the easiest solution and possibly the most effective (needs further testing).
+* Closing and reopening the Unity editor will restore the text, but the issue may recur later.
+* If these methods don't work, close Unity, delete the `Library/` folder from your project (this is safe to delete), then reopen the project again. Unity will rebuild the library folder automatically, which will take a long time, but it _should_ clear the bug.
 
 ### "I have a complex project with backstage processes that isn't working as it should."
 
