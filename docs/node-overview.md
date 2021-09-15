@@ -122,6 +122,10 @@ Also, check you are using the right expressions:
   * A variable that is being subtracted from can go into negative numbers. If the value represents an amount that doesn't make sense to go lower than 0 - e.g. `playerGoldPieces`, `numberOfGummyWorms` - this can cause unexpected behaviour. For numbers like this, it's best to use `max(ArrowsInQuiver -1, 0)` instead of `ArrowsInQuiver -1`.
 * Be careful using conditions to check for `Boolean=false`. When a Boolean variable cannot be found by VNKit, it defaults to _null_, not to false. Since you will usually be setting a story flag to True at the same time as you create it, it is usually better practice to check that a story flag has not been set by checking for `not Boolean`, which accepts both `Boolean=false` and `Boolean=null`.
 
+### "All the text in the Story Editor is blank/corrupted!"
+
+This seems to be a bug with Unity's "UI Toolkit" framework, which VNKit uses. Closing and reopening the Unity editor may fix this temporarily, but if it persists: close Unity, delete the `Library/` folder from your project (it's safe to delete this), then reopen the project again. Unity will rebuild the library folder automatically, which will take a long time, but it _should_ clear the bug.
+
 ### "I have a complex project with backstage processes that isn't working as it should."
 
 A good starting point is to add the Debug message Action to every node that is potentially suspect. The Debug message Action will push a message to Unity's console every time the node is active, which will make it easier to see if something is going wrong. If you are debugging a loop process, make sure the Collapse button is not selected, so you can see the Debug messages appear in the order your project creates them.
