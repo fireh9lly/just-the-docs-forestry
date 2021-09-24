@@ -301,6 +301,34 @@ With both `start` and `count` defined, the return value will be an array of tabl
 
 Retrieves a single numbered row from a data table.
 
+### getNode()
+
+### getNode(id)
+
+Retrieves either the current story node or the node with the specified `id` (an integer). The return value is an object with the following fields:
+
+`id` -> The node ID (an integer).
+
+`name` -> The name of the node (a string). For unnamed nodes this an empty string (`""`).
+
+`pos` -> The (X, Y) position of the node in the editor. This is probably not that useful.
+
+`condition` -> The condition defined on the node, expressed as a string.
+
+`speaker` -> The name of the speaking character. If the node has no speaker this is an empty string.
+
+`text` -> The dialogue or narration text of the node.
+
+`clearTextbox` -> A boolean indicating whether this node clears the previous contents of the textbox (or, in NVL mode, starts a new paragraph).
+
+`actionList` -> A list of actions defined on the node.
+
+`links` -> An ordered list of links to other nodes, as numeric IDs.
+
+`choices` -> A list of the choices defined on the node.
+
+`notes` -> A string containing designer notes for the node.
+
 ### getSaveData(filename)
 
 Retrieves the data stored in the save file referred to by `filename`, as an object. The value of `filename` should usually be of the format `Save1`, `Save2`, `Save3`, etc. `Save0` is a special save file reserved for quicksaving.
