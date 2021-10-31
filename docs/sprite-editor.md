@@ -27,6 +27,12 @@ The centre panel shows the currently-selected _layer_ of the sprite. For simple 
 >
 > Try making a temporary Start node that displays the sprite with the relevant layers showing, then Play your game. In the live preview (in the Unity editor itself), you can then drag the layer into position using the mouse. When it looks good, take a note of the coordinates displayed in the inspector - you can then use that as the position of the layer in the Spite Editor.
 
+### Importing sprites
+
+(To do)
+
+### Setting up multiple states
+
 Below the offset you can see a list of the **states** (animations) belonging to the layer. You can select a state by clicking on it, or click the "+ Add state" button to add a new state. Right-clicking a state will allow you to rename or delete it.
 
 When a sprite is selected, the right panel will show the basic information belonging to the sprite:
