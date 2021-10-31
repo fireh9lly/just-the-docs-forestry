@@ -65,6 +65,9 @@ This same coordinate system is used for displaying sprites as well. Let's put As
 
 ### b) Sprite editor
 
-\[coming soon\]
+* Where to import sprites
+* Anatomy of the sprite editor
+* Set up Astra's states
+* Oh no! What if I want to use layers??
 
 \[add Preview section! add TMP message!\]
