@@ -71,3 +71,10 @@ This same coordinate system is used for displaying sprites as well. Let's put As
 * Oh no! What if I want to use layers??
 
 \[add Preview section! add TMP message!\]
+
+* Putting Astra's sprite on screen
+
+### c) Music
+
+* Where to import music
+* Music action commands
